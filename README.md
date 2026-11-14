@@ -39,7 +39,7 @@ npm test
 Artefatos locais ampliados e verificados em 14/11/2026: GenAI com placar RAG/agente > baseline (`qwen2.5:7b`), coleta Big Data com dois lotes reais em `chegada/`, RPA ponta a ponta no MVP, treino HSV de visão (sintético) e `npm test` 40/40.
 
 **Repositório público:** https://github.com/eduardonistal/gs-citizentech-alerta-cidade  
-**MVP (túnel):** https://icy-lamps-give.loca.lt  
+**MVP (túnel):** https://sweet-moose-pump.loca.lt  
 
 **Ainda faltam para 100% do PDF:** vídeos/YouTube, Teams, Airflow/Databricks com prints e deploy cloud permanente. Detalhes em [`CHECKLIST_ENTREGAS.md`](./CHECKLIST_ENTREGAS.md).
 
