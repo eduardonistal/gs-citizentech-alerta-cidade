@@ -31,7 +31,7 @@ jobs:
         with:
           config: p/default
       - name: Scan Terraform configuration
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@0.30.0
         with:
           scan-type: config
           scan-ref: 06-Secure-DevOps-Tools-Cloud-Computing/terraform
@@ -39,6 +39,8 @@ jobs:
           severity: HIGH,CRITICAL
       - name: Validate Terraform
         run: |
+          curl -fsSL https://releases.hashicorp.com/terraform/1.9.8/terraform_1.9.8_linux_amd64.zip -o /tmp/tf.zip
+          sudo unzip -o /tmp/tf.zip -d /usr/local/bin
           terraform -chdir=06-Secure-DevOps-Tools-Cloud-Computing/terraform fmt -check -recursive
           terraform -chdir=06-Secure-DevOps-Tools-Cloud-Computing/terraform init -backend=false
           terraform -chdir=06-Secure-DevOps-Tools-Cloud-Computing/terraform validate
@@ -70,7 +72,7 @@ jobs:
           tags: ${{ steps.image.outputs.name }}
       - name: Scan published image
         if: github.event_name == 'push'
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@0.30.0
         with:
           image-ref: ${{ steps.image.outputs.name }}
           format: table
@@ -78,7 +80,7 @@ jobs:
           severity: HIGH,CRITICAL
 
   deploy:
-    if: github.event_name == 'push'
+    if: ${{ github.event_name == 'push' && secrets.AZURE_CLIENT_ID != '' }}
     needs: build
     runs-on: ubuntu-latest
     permissions:
