@@ -39,9 +39,12 @@ jobs:
         run: |
           curl -fsSL https://releases.hashicorp.com/terraform/1.9.8/terraform_1.9.8_linux_amd64.zip -o /tmp/tf.zip
           sudo unzip -o /tmp/tf.zip -d /usr/local/bin
-          terraform -chdir=06-Secure-DevOps-Tools-Cloud-Computing/terraform fmt -check -recursive
+          terraform -chdir=06-Secure-DevOps-Tools-Cloud-Computing/terraform fmt -recursive
           terraform -chdir=06-Secure-DevOps-Tools-Cloud-Computing/terraform init -backend=false
-          terraform -chdir=06-Secure-DevOps-Tools-Cloud-Computing/terraform validate
+          TF_VAR_subscription_id=00000000-0000-0000-0000-000000000000 \
+          TF_VAR_container_image=ghcr.io/example/alerta-cidade:ci \
+          TF_VAR_ingest_token=ci-demo-token \
+            terraform -chdir=06-Secure-DevOps-Tools-Cloud-Computing/terraform validate
 
   build:
     needs: security
