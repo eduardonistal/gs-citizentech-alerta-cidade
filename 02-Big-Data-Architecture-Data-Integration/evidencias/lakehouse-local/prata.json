@@ -1,0 +1,41 @@
+{
+  "regras": {
+    "precipitacao_nao_negativa": 0,
+    "municipio_com_id": 0,
+    "payload_nao_vazio": 0
+  },
+  "linhas": [
+    {
+      "fonte": "open_meteo",
+      "arquivo": "open_meteo_2026-11-13.json",
+      "qualidade": {
+        "payload_ok": true
+      },
+      "referencia": "precipitacao_potencial"
+    },
+    {
+      "fonte": "open_meteo",
+      "arquivo": "open_meteo_2026-11-14.json",
+      "qualidade": {
+        "payload_ok": true
+      },
+      "referencia": "precipitacao_potencial"
+    },
+    {
+      "fonte": "ibge_municipios",
+      "arquivo": "ibge_municipios_2026-11-13.json",
+      "qualidade": {
+        "payload_ok": true
+      },
+      "referencia": "territorio"
+    },
+    {
+      "fonte": "ibge_municipios",
+      "arquivo": "ibge_municipios_2026-11-14.json",
+      "qualidade": {
+        "payload_ok": true
+      },
+      "referencia": "territorio"
+    }
+  ]
+}

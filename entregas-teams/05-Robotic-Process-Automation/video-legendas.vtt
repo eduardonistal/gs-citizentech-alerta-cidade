@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:11.000
+Sou Eduardo de Oliveira Nistal, RM nove quatro cinco dois quatro. Este fluxo automatiza a coleta de previsão pública e a publicação rastreável no MVP.
+
+2
+00:00:11.000 --> 00:00:21.000
+O fluxo aplica decisão sobre cada data, percorre a coleção de previsões, rejeita itens inválidos e registra falhas sem expor segredos.
+
+3
+00:00:21.000 --> 00:00:34.000
+Em quatorze de novembro de dois mil e vinte e seis, a automação publicou três alertas no MVP com sucesso. O log sanitizado não contém token nem cabeçalhos sensíveis.
+
+4
+00:00:34.000 --> 00:00:44.000
+O resultado é consumido pelo MVP via API autenticada. Mantemos o workflow n8n e o runner Node como caminhos equivalentes e documentados.

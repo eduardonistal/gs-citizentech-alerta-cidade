@@ -1,0 +1,87 @@
+{
+  "synthetic": true,
+  "model_type": "hsv_threshold_v1",
+  "counts": {
+    "tp": 6,
+    "fp": 0,
+    "tn": 6,
+    "fn": 0
+  },
+  "precision": 1,
+  "recall": 1,
+  "f1": 1,
+  "rows": [
+    {
+      "id": "syn-28",
+      "expected": "water_on_road",
+      "label": "water_on_road",
+      "confidence": 0.906
+    },
+    {
+      "id": "syn-29",
+      "expected": "dry_road",
+      "label": "dry_road",
+      "confidence": 0
+    },
+    {
+      "id": "syn-30",
+      "expected": "water_on_road",
+      "label": "water_on_road",
+      "confidence": 0.891
+    },
+    {
+      "id": "syn-31",
+      "expected": "dry_road",
+      "label": "dry_road",
+      "confidence": 0
+    },
+    {
+      "id": "syn-32",
+      "expected": "water_on_road",
+      "label": "water_on_road",
+      "confidence": 1
+    },
+    {
+      "id": "syn-33",
+      "expected": "dry_road",
+      "label": "dry_road",
+      "confidence": 0
+    },
+    {
+      "id": "syn-34",
+      "expected": "water_on_road",
+      "label": "water_on_road",
+      "confidence": 0.891
+    },
+    {
+      "id": "syn-35",
+      "expected": "dry_road",
+      "label": "dry_road",
+      "confidence": 0
+    },
+    {
+      "id": "syn-36",
+      "expected": "water_on_road",
+      "label": "water_on_road",
+      "confidence": 0.922
+    },
+    {
+      "id": "syn-37",
+      "expected": "dry_road",
+      "label": "dry_road",
+      "confidence": 0
+    },
+    {
+      "id": "syn-38",
+      "expected": "water_on_road",
+      "label": "water_on_road",
+      "confidence": 0.891
+    },
+    {
+      "id": "syn-39",
+      "expected": "dry_road",
+      "label": "dry_road",
+      "confidence": 0
+    }
+  ]
+}

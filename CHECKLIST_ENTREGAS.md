@@ -15,18 +15,18 @@ Legenda: **Verificado** = executado localmente com evidência; **Preparado** = a
 | Um integrante envia cada disciplina | Responsável: Eduardo de Oliveira Nistal — RM94524. |
 | Presença nas aulas | Pendente externo (registro FIAP). |
 | Enviar no Teams até o prazo | Pendente externo. |
-| Links públicos na correção | Repo: https://github.com/eduardonistal/gs-citizentech-alerta-cidade. Vídeos públicos (release): https://github.com/eduardonistal/gs-citizentech-alerta-cidade/releases/tag/videos-pt-br-2026-11-14. Falta YouTube não listado + Teams. |
+| Links públicos na correção | Repo: https://github.com/eduardonistal/gs-citizentech-alerta-cidade. Vídeos (release): https://github.com/eduardonistal/gs-citizentech-alerta-cidade/releases/tag/videos-pt-br-2026-11-14. MVP HTTPS: https://journey-formatting-alone-swing.trycloudflare.com. Falta YouTube não listado + Teams. |
 
 ## Situação por disciplina
 
 | Disciplina | Atendido localmente agora | Ainda pendente para 100% do PDF |
 |---|---|---|
 | **Generative AI (p. 29–31)** | Base+fontes; 6 casos com “não consta”; recall@1/@3; JSON/citações/recusa; agente vs RAG vs baseline; placar interpretado; 5 erros com correção; notebook; README. Benchmark `qwen2.5:7b` **verificado**: task compliance RAG/agente **1,000** vs baseline **0,333**. Vídeo local: [`videos/01-generative-ai-demo.mp4`](./videos/01-generative-ai-demo.mp4). | YouTube não listado + URL no README + envio Teams. |
-| **Big Data (p. 32–38)** | 2 fontes reais; DAG paralelo; Bronze/Prata/Ouro/SQL; LGPD; README; **2 lotes reais** em `chegada/` (13 e 14/11/2026); PDF regenerável. | Airflow Graph/Grid, upload Volume, contagens Databricks, prints, Teams. |
+| **Big Data (p. 32–38)** | 2 fontes reais; DAG paralelo; Bronze/Prata/Ouro/SQL; LGPD; README; **2 lotes reais** em `chegada/`; Airflow Docker **2 runs success** + prints em `evidencias/airflow/`; lakehouse local. | Databricks Free Edition (prints Volume) + Teams. |
 | **BI & Startup (p. 41–42)** | Roteiro 5 min com evidência Open-Meteo verificada (0,10 mm em 14/11/2026); modelo de negócio; ODS 11/13. Vídeo local: [`videos/03-pitch-alerta-cidade.mp4`](./videos/03-pitch-alerta-cidade.mp4). | YouTube não listado + MVP URL estável + Teams. |
 | **Computer Vision (p. 43–44)** | Código YOLO + treino HSV **executado** (F1=1,000 sintético); PDF com título, integrante, resumo≈250, objetivo≈50, ferramentas, metodologia, resultados, conclusão. Vídeo local: [`videos/04-computer-vision-demo.mp4`](./videos/04-computer-vision-demo.mp4). | Dataset fotográfico licenciado + YouTube + Teams. |
 | **RPA (p. 45–50)** | Mapa/BPMN; decisão+loop; exceções; logs sanitizados; **execução ponta a ponta verificada** (3 itens publicados no MVP); testes sucesso/falha; README. Vídeo local: [`videos/05-rpa-demo.mp4`](./videos/05-rpa-demo.mp4). | YouTube ≤3 min + PDF com links finais + Teams. |
-| **Secure DevOps (p. 51–53)** | Dockerfile não-root, Compose, Terraform, workflow Gitleaks/Semgrep/Trivy, dashboard 4 métricas, runbook, template de custo, README. | Docker local/CI real, deploy público, execução barrada+corrigida, alerta disparado, custo cotado, repo público, Teams. Teto cloud informado: R$ 0. |
+| **Secure DevOps (p. 51–53)** | Dockerfile/Compose/TF; Prometheus+Grafana up; alerta **firing** (`evidencias/prometheus-alerts-firing.*`); Gitleaks bloqueio→limpo; Trivy/Semgrep logs; MVP HTTPS Cloudflare; custo R$ 0. | CI GitHub Actions (escopo `workflow`), Terraform apply (bloqueado R$ 0), Teams. |
 
 ## Resultado
 

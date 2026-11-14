@@ -1,15 +1,25 @@
-# Dados e proveniência
+﻿# Dataset fotográfico licenciado — water_on_road
 
-**Status: pendente.** Nenhuma imagem está incluída; não usar screenshots de redes sociais nem imagens com pessoas identificáveis sem base legal/consentimento.
+**Responsável:** Eduardo de Oliveira Nistal — RM94524  
+**Uso:** candidatos a água acumulada sobre via para revisão humana (não confirma alagamento oficial).
 
-`metric-example.synthetic.json` contém apenas rótulos binários sintéticos para ilustrar cálculos de precisão, recall e F1. É um exemplo didático, não tem proveniência de imagens e não representa treinamento YOLO, mAP de detecção de objetos ou desempenho de modelo (`synthetic: true`, `model_evaluated: false`).
+## Fontes
 
-Antes do treinamento, registrar:
+Imagens obtidas via Openverse/Flickr com licenças abertas (CC BY / CC BY-SA / PDM). Atribuição completa em `ATTRIBUTION.json`.
 
-- URL/fonte pública de cada imagem e data de obtenção;
-- licença que permita treinamento e redistribuição das imagens/anotações;
-- critérios de inclusão e exclusão e política de rostos/placas;
-- anotador, revisão dos rótulos e divisão treino/validação/teste por origem;
-- equilíbrio de chuva, iluminação, perspectiva, pavimento, regiões e falsos positivos.
+## Classe
 
-Estrutura esperada: `images/{train,val,test}/` e `labels/{train,val,test}/`, com rótulos YOLO. Fontes reais e licenças, pesos treinados, métricas YOLO e evidências da demonstração permanecem pendentes. Sem essa curadoria, não há alegação de desempenho.
+- `water_on_road` — região com água sobre superfície de via/rua (candidato).
+
+## Limites
+
+Fotografias históricas/externas; não representam ocorrências oficiais do município-alvo do MVP. Inferência só gera candidatos.
+
+## Arquivos
+
+- brisbane_james_street_flood.jpg
+- castleton_depot_sandbagging.jpg
+- in_the_rain_street.jpg
+- sandy_east_village_flood.jpg
+- vicenza_flooding_2010.jpg
+- wet_cab_street_water.jpg

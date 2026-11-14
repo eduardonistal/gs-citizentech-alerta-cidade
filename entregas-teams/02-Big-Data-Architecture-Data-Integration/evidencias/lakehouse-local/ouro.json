@@ -1,0 +1,42 @@
+{
+  "fato_precipitacao_diaria": [
+    {
+      "data_lote": "2026-11-13",
+      "fonte": "Open-Meteo",
+      "latitude": -23.55,
+      "longitude": -46.63,
+      "precip_sum_dia0": null
+    },
+    {
+      "data_lote": "2026-11-14",
+      "fonte": "Open-Meteo",
+      "latitude": -23.55,
+      "longitude": -46.63,
+      "precip_sum_dia0": null
+    }
+  ],
+  "dim_territorio": [
+    {
+      "data_lote": "2026-11-13",
+      "fonte": "IBGE Localidades",
+      "registros": 1
+    },
+    {
+      "data_lote": "2026-11-14",
+      "fonte": "IBGE Localidades",
+      "registros": 1
+    }
+  ],
+  "dim_fonte": [
+    {
+      "fonte_id": "open_meteo",
+      "licenca": "CC BY 4.0 (Open-Meteo)",
+      "uso": "previsao"
+    },
+    {
+      "fonte_id": "ibge_municipios",
+      "licenca": "dados abertos IBGE",
+      "uso": "territorio"
+    }
+  ]
+}

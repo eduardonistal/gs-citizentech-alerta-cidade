@@ -1,0 +1,11 @@
+{
+  "status": "synthetic_example",
+  "synthetic": true,
+  "run_id": "synthetic-run-0001",
+  "timestamp": "2026-11-06T12:00:00.000Z",
+  "event": "workflow_step_failed",
+  "items_processed": null,
+  "success_count": 0,
+  "failure_count": 0,
+  "message": "[SYNTHETIC] forecast source unavailable; publication skipped."
+}

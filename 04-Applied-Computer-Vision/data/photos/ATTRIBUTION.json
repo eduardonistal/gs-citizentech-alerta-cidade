@@ -1,0 +1,56 @@
+[
+    {
+        "file":  "sandy_east_village_flood.jpg",
+        "title":  "Hurricane Sandy Flooding East Village 2012",
+        "license":  "CC BY 2.0",
+        "author":  "david_shankbone",
+        "source":  "https://live.staticflickr.com/8467/8139657077_bfce5f6c04_b.jpg",
+        "bytes":  244675,
+        "label":  "water_on_road_candidate"
+    },
+    {
+        "file":  "brisbane_james_street_flood.jpg",
+        "title":  "James Street Fortitude Valley flood 1893",
+        "license":  "Public Domain Mark 1.0",
+        "author":  "Queensland State Archives",
+        "source":  "https://live.staticflickr.com/8805/29537771041_97d805fffe_b.jpg",
+        "bytes":  128803,
+        "label":  "water_on_road_candidate"
+    },
+    {
+        "file":  "vicenza_flooding_2010.jpg",
+        "title":  "Vicenza flooding Nov.1, 2010",
+        "license":  "CC BY 2.0",
+        "author":  "US Army Africa",
+        "source":  "https://live.staticflickr.com/1420/5157191333_01fb72ec73_b.jpg",
+        "bytes":  206381,
+        "label":  "water_on_road_candidate"
+    },
+    {
+        "file":  "wet_cab_street_water.jpg",
+        "title":  "Wet Cab",
+        "license":  "CC BY-SA 2.0",
+        "author":  "remysharp",
+        "source":  "https://live.staticflickr.com/3184/3047872076_61a511a04b_b.jpg",
+        "bytes":  218596,
+        "label":  "water_on_road_candidate"
+    },
+    {
+        "file":  "in_the_rain_street.jpg",
+        "title":  "In the rain",
+        "license":  "CC BY 2.0",
+        "author":  "ClickFlashPhotos / Nicki Varkevisser",
+        "source":  "https://live.staticflickr.com/3590/3600190005_32e82122a4_b.jpg",
+        "bytes":  185935,
+        "label":  "water_on_road_candidate"
+    },
+    {
+        "file":  "castleton_depot_sandbagging.jpg",
+        "title":  "Castleton Depot Sandbagging 1",
+        "license":  "CC BY 2.0",
+        "author":  "MTAPhotos",
+        "source":  "https://live.staticflickr.com/8183/8136676811_d2de6e9823.jpg",
+        "bytes":  64781,
+        "label":  "water_on_road_candidate"
+    }
+]

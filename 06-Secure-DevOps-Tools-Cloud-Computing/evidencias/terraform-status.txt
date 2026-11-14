@@ -1,0 +1,1 @@
+terraform nao instalado - planejado apply bloqueado por teto R$0

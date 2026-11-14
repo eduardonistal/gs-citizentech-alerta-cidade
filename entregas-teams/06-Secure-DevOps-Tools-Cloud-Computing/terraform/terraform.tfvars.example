@@ -1,0 +1,2 @@
+# Copie para um arquivo local não versionado e forneça token somente por secret manager.
+container_image = "ghcr.io/OWNER/REPOSITORY:COMMIT_SHA"

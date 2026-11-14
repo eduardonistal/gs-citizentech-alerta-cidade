@@ -1,0 +1,16 @@
+docker : 
+At line:19 char:1
++ docker run --rm -v "${fixtureDir}:/repo" zricethezav/gitleaks:v8.21.2 ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    ?
+    ¦?
+    ¦ ?
+    ? ¦
+    ¦    gitleaks
+
+[90m8:08PM[0m [32mINF[0m scan completed in 6.22ms
+[90m8:08PM[0m [32mINF[0m no leaks found
+

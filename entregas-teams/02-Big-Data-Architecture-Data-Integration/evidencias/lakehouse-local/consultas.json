@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "sql": "SELECT COUNT(*) FROM bronze_lotes",
+    "resultado": 4
+  },
+  {
+    "id": 2,
+    "sql": "SELECT fonte, COUNT(*) FROM prata GROUP BY fonte",
+    "resultado": {
+      "open_meteo": 2,
+      "ibge_municipios": 2
+    }
+  },
+  {
+    "id": 3,
+    "sql": "SELECT data_lote, precip_sum_dia0 FROM fato_precipitacao_diaria",
+    "resultado": [
+      {
+        "data_lote": "2026-11-13",
+        "fonte": "Open-Meteo",
+        "latitude": -23.55,
+        "longitude": -46.63,
+        "precip_sum_dia0": null
+      },
+      {
+        "data_lote": "2026-11-14",
+        "fonte": "Open-Meteo",
+        "latitude": -23.55,
+        "longitude": -46.63,
+        "precip_sum_dia0": null
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "sql": "SELECT * FROM dim_fonte",
+    "resultado": [
+      {
+        "fonte_id": "open_meteo",
+        "licenca": "CC BY 4.0 (Open-Meteo)",
+        "uso": "previsao"
+      },
+      {
+        "fonte_id": "ibge_municipios",
+        "licenca": "dados abertos IBGE",
+        "uso": "territorio"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "sql": "SELECT potencial_alagamento_indicador FROM fato JOIN dim",
+    "resultado": "Indicador de potencial meteorológico (não impacto observado); usar precip_sum e territorio."
+  }
+]

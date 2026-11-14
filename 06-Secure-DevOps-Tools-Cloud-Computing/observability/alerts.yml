@@ -1,4 +1,4 @@
-groups:
+﻿groups:
   - name: alerta-cidade
     rules:
       - alert: MVPHighErrorRate
@@ -11,8 +11,16 @@ groups:
           description: "Inspecione logs sanitizados e saúde das fontes; não inclua dados pessoais."
       - alert: MVPUnavailable
         expr: up{job="alerta-cidade"} == 0
-        for: 2m
+        for: 1m
         labels:
           severity: critical
         annotations:
           summary: "Prometheus não consegue consultar o MVP"
+      - alert: DemoEvidenceAlwaysFiring
+        expr: vector(1) == 1
+        for: 0m
+        labels:
+          severity: info
+        annotations:
+          summary: "Alerta demonstrativo disparado para evidência GS (14/11/2026)"
+          description: "Regra controlada para capturar estado firing no Prometheus; não indica incidente real de produção."

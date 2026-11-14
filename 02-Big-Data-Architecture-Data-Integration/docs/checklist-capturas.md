@@ -22,4 +22,4 @@
 
 Para cada captura, anotar data/hora, ambiente, execução/lote relacionado e breve legenda. Usar recortes legíveis sem esconder erros, identificadores sensíveis ou contexto que altere a interpretação. Não fabricar prints nem preencher contagens com estimativas.
 
-**Status:** Airflow/Databricks ainda não foram executados; todas as evidências acima permanecem pendentes.
+**Status (14/11/2026):** Airflow local Docker **executado** (`gs_alerta_cidade_coleta`, 2 runs success). Prints/JSON em `evidencias/airflow/`. Lakehouse Bronze/Prata/Ouro local em `evidencias/lakehouse-local/`. Databricks Free Edition UI ainda depende de conta do aluno para prints oficiais do Volume.

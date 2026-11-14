@@ -1,0 +1,64 @@
+docker : Unable to find image 'returntocorp/semgrep:1.97.0' locally
+At line:16 char:1
++ docker run --rm -v "C:/Users/Nistal/Desktop/GS:/src" returntocorp/sem ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Unable to find ...1.97.0' locally:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+1.97.0: Pulling from returntocorp/semgrep
+8006e90fa555: Pulling fs layer
+727f854a84d4: Pulling fs layer
+da9db072f522: Pulling fs layer
+590b62f6f999: Pulling fs layer
+3573cf11bf5f: Pulling fs layer
+162803a91fff: Pulling fs layer
+5e699b31c22b: Pulling fs layer
+995b0401bef7: Pulling fs layer
+584d4c8c261d: Pulling fs layer
+8e8107752a3f: Pulling fs layer
+f4830df21411: Pulling fs layer
+102d4a3d4db2: Pulling fs layer
+92784726bcb3: Pulling fs layer
+69d634f4bccc: Pulling fs layer
+f22bb907d48d: Pulling fs layer
+ee8cbe3bd494: Pulling fs layer
+a92bf8f545ff: Pulling fs layer
+79f668750c63: Pulling fs layer
+da9db072f522: Already exists
+590b62f6f999: Download complete
+8006e90fa555: Download complete
+162803a91fff: Download complete
+79f668750c63: Download complete
+3573cf11bf5f: Download complete
+5e699b31c22b: Download complete
+995b0401bef7: Download complete
+92784726bcb3: Download complete
+69d634f4bccc: Download complete
+8e8107752a3f: Download complete
+8e8107752a3f: Pull complete
+f4830df21411: Download complete
+f22bb907d48d: Download complete
+ee8cbe3bd494: Download complete
+a92bf8f545ff: Download complete
+584d4c8c261d: Download complete
+727f854a84d4: Download complete
+8006e90fa555: Pull complete
+3573cf11bf5f: Pull complete
+69d634f4bccc: Pull complete
+102d4a3d4db2: Download complete
+162803a91fff: Pull complete
+995b0401bef7: Pull complete
+79f668750c63: Pull complete
+f4830df21411: Pull complete
+92784726bcb3: Pull complete
+584d4c8c261d: Pull complete
+102d4a3d4db2: Pull complete
+590b62f6f999: Pull complete
+5e699b31c22b: Pull complete
+ee8cbe3bd494: Pull complete
+a92bf8f545ff: Pull complete
+f22bb907d48d: Pull complete
+727f854a84d4: Pull complete
+Digest: sha256:a265d09a9ca712e6624aca09056304ce4314a695b7028d65c041dd53fd44c700
+Status: Downloaded newer image for returntocorp/semgrep:1.97.0
+

@@ -1,0 +1,7 @@
+NAMES                                                           IMAGE                     STATUS                   PORTS
+06-secure-devops-tools-cloud-computing-prometheus-1             prom/prometheus:v2.55.1   Up 7 minutes             127.0.0.1:9090->9090/tcp
+06-secure-devops-tools-cloud-computing-grafana-1                grafana/grafana:11.3.0    Up 7 minutes             127.0.0.1:3001->3000/tcp
+02-big-data-architecture-data-integration-airflow-webserver-1   apache/airflow:2.10.4     Up 8 minutes (healthy)   127.0.0.1:8080->8080/tcp
+02-big-data-architecture-data-integration-airflow-scheduler-1   apache/airflow:2.10.4     Up 8 minutes             8080/tcp
+02-big-data-architecture-data-integration-postgres-1            postgres:16               Up 9 minutes (healthy)   5432/tcp
+

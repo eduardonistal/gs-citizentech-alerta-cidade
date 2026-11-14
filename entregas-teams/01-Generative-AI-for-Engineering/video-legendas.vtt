@@ -1,0 +1,21 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:13.000
+Sou Eduardo de Oliveira Nistal, RM nove quatro cinco dois quatro. Esta é a demonstração do componente de inteligência artificial generativa do Alerta Cidade, rodando com modelo local.
+
+2
+00:00:13.000 --> 00:00:22.000
+Comparamos o mesmo modelo em três modos: baseline sem contexto, RAG com recuperação de trechos e agente especializado de prevenção.
+
+3
+00:00:22.000 --> 00:00:40.000
+Na rodada verificada com qwen dois ponto cinco sete bê, o baseline obteve conformidade de zero vírgula três três três. RAG e agente chegaram a um ponto zero. O recall na posição três da recuperação lexical foi um ponto zero.
+
+4
+00:00:40.000 --> 00:00:54.000
+Perguntas sem evidência na base, como população exata de bairro ou rota de fuga, são recusadas com citações vazias, em conformidade com a LGPD e com os limites do produto.
+
+5
+00:00:54.000 --> 00:01:04.000
+Código, base de conhecimento, casos de teste, notebook e erros reais estão no repositório público. A IA não substitui orientação oficial.

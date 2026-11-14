@@ -60,7 +60,7 @@ Reunir dados públicos recentes, apresentar uma estimativa preliminar e rastreá
 ## URLs e repositório
 
 - MVP local: `http://localhost:3000`.
-- URL pública (túnel ativo enquanto a máquina estiver ligada): `https://silver-carrots-throw.loca.lt` — verificada em 14/11/2026 com `GET /api/health`.
+- URL pública (túnel ativo enquanto a máquina estiver ligada): `https://journey-formatting-alone-swing.trycloudflare.com` — verificada em 14/11/2026 com `GET /api/health`.
 - Repositório público GitHub: https://github.com/eduardonistal/gs-citizentech-alerta-cidade
 
 ## Indicadores e ODS

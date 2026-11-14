@@ -1,0 +1,9 @@
+docker : error while interpolating services.grafana.environment.GF_SECURITY_ADMIN_PASSWORD: required variable 
+GRAFANA_ADMIN_PASSWORD is missing a value: Set GRAFANA_ADMIN_PASSWORD outside the repository
+At line:3 char:1
++ docker compose -f 'C:\Users\Nistal\Desktop\GS\06-Secure-DevOps-Tools- ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error while int... the repository:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

@@ -20,4 +20,4 @@
 
 Anotar comando/execução, commit, ambiente, data/hora e legenda para cada evidência. Mascarar secrets e dados pessoais. Manter evidências sintéticas claramente marcadas e separadas de execução real.
 
-**Status:** Compose, Terraform, CI, Prometheus e Grafana ainda não foram executados aqui. Sem autorização de custo positivo, o deploy público permanece bloqueado; esta lista não comprova execução.
+**Status (14/11/2026):** Prometheus/Grafana Docker up; alerta `DemoEvidenceAlwaysFiring` em estado **firing** (`evidencias/prometheus-alerts-firing.json`); Gitleaks bloqueio+limpo (`ci-gitleaks-blocked.txt` / `ci-gitleaks-clean.txt`); Trivy/Semgrep logs salvos. CI GitHub Actions ainda depende de escopo `workflow`. Deploy HTTPS cloud e Terraform apply bloqueados pelo teto R$ 0 (MVP via túnel).

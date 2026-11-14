@@ -1,0 +1,99 @@
+name: DevSecOps
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Run project tests
+        run: npm test
+      - name: Scan secrets
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Scan source
+        uses: semgrep/semgrep-action@v1
+        with:
+          config: p/default
+      - name: Scan Terraform configuration
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: config
+          scan-ref: 06-Secure-DevOps-Tools-Cloud-Computing/terraform
+          exit-code: "1"
+          severity: HIGH,CRITICAL
+      - name: Validate Terraform
+        run: |
+          terraform -chdir=06-Secure-DevOps-Tools-Cloud-Computing/terraform fmt -check -recursive
+          terraform -chdir=06-Secure-DevOps-Tools-Cloud-Computing/terraform init -backend=false
+          terraform -chdir=06-Secure-DevOps-Tools-Cloud-Computing/terraform validate
+
+  build:
+    needs: security
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set image name
+        id: image
+        run: echo "name=ghcr.io/${GITHUB_REPOSITORY,,}:${GITHUB_SHA}" >> "$GITHUB_OUTPUT"
+      - name: Login to GHCR
+        if: github.event_name == 'push'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: 06-Secure-DevOps-Tools-Cloud-Computing/Dockerfile
+          push: ${{ github.event_name == 'push' }}
+          tags: ${{ steps.image.outputs.name }}
+      - name: Scan published image
+        if: github.event_name == 'push'
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: ${{ steps.image.outputs.name }}
+          format: table
+          exit-code: "1"
+          severity: HIGH,CRITICAL
+
+  deploy:
+    if: github.event_name == 'push'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Login to Azure with OIDC
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - name: Deploy reviewed image
+        run: |
+          az containerapp update \
+            --resource-group "${{ vars.AZURE_RESOURCE_GROUP }}" \
+            --name "${{ vars.AZURE_CONTAINER_APP }}" \
+            --image "ghcr.io/${GITHUB_REPOSITORY,,}:${GITHUB_SHA}"

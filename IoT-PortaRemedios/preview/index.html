@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PortaRemédios — preview 3D</title>
+  <style>
+    :root {
+      --bg0: #e8eef2;
+      --bg1: #c5d4de;
+      --ink: #1a2b34;
+      --accent: #1f7a6c;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; overflow: hidden; font-family: "Segoe UI", system-ui, sans-serif; color: var(--ink); }
+    body {
+      background:
+        radial-gradient(1200px 600px at 20% 0%, #f7fafc 0%, transparent 55%),
+        linear-gradient(160deg, var(--bg0), var(--bg1));
+    }
+    #c { width: 100%; height: 100%; display: block; }
+    .hud {
+      position: fixed; left: 1.25rem; top: 1.25rem; max-width: 22rem;
+      background: rgba(255,255,255,.82); backdrop-filter: blur(8px);
+      border: 1px solid rgba(26,43,52,.12); padding: 1rem 1.1rem; border-radius: 12px;
+    }
+    .hud h1 { margin: 0 0 .35rem; font-size: 1.15rem; letter-spacing: -.02em; }
+    .hud p { margin: 0; font-size: .88rem; line-height: 1.4; opacity: .85; }
+    .hud .row { margin-top: .85rem; display: flex; gap: .5rem; flex-wrap: wrap; }
+    button {
+      border: 0; background: var(--accent); color: #fff; padding: .45rem .75rem;
+      border-radius: 8px; cursor: pointer; font-weight: 600; font-size: .82rem;
+    }
+    button.ghost { background: transparent; color: var(--ink); border: 1px solid rgba(26,43,52,.2); }
+    .hint { position: fixed; right: 1.25rem; bottom: 1.25rem; font-size: .8rem; opacity: .7; }
+  </style>
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <aside class="hud">
+    <h1>PortaRemédios IoT</h1>
+    <p>7 casinhas com reed switch + imã. Baia lateral para ESP32. Arraste para orbitar.</p>
+    <div class="row">
+      <button id="btnOpen">Simular tampas</button>
+      <button id="btnAlarm" class="ghost">Testar alarme</button>
+    </div>
+  </aside>
+  <div class="hint">Molde OpenSCAD em <code>../openscad/</code></div>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module">
+    import * as THREE from "three";
+    import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+
+    const DAYS = ["SEG","TER","QUA","QUI","SEX","SAB","DOM"];
+    const cellW = 28, cellD = 36, cellH = 22, wall = 2.2, gap = 1.6, floor = 6;
+    const espW = 58, espD = 32;
+    const bodyW = 7 * cellW + 8 * gap + wall * 2 + espW + wall;
+    const bodyD = cellD + wall * 2 + gap * 2;
+    const bodyH = cellH + floor;
+
+    const canvas = document.getElementById("c");
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    renderer.shadowMap.enabled = true;
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(40, 1, 1, 2000);
+    camera.position.set(180, 140, 220);
+
+    const controls = new OrbitControls(camera, canvas);
+    controls.target.set(bodyW / 2, 20, bodyD / 2);
+    controls.enableDamping = true;
+
+    const hemi = new THREE.HemisphereLight(0xffffff, 0x8aa0ad, 1.1);
+    scene.add(hemi);
+    const key = new THREE.DirectionalLight(0xffffff, 1.15);
+    key.position.set(80, 160, 60);
+    key.castShadow = true;
+    scene.add(key);
+
+    const matBody = new THREE.MeshStandardMaterial({ color: 0xf2f5f7, roughness: 0.55, metalness: 0.05 });
+    const matLid = new THREE.MeshStandardMaterial({ color: 0x1f7a6c, roughness: 0.45, metalness: 0.08 });
+    const matEsp = new THREE.MeshStandardMaterial({ color: 0x163a32, roughness: 0.4, metalness: 0.2 });
+    const matReed = new THREE.MeshStandardMaterial({ color: 0xc45c26, roughness: 0.5 });
+    const matMag = new THREE.MeshStandardMaterial({ color: 0x333333, metalness: 0.7, roughness: 0.3 });
+
+    function box(w, h, d, mat, x, y, z) {
+      const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat);
+      m.position.set(x, y, z);
+      m.castShadow = true;
+      m.receiveShadow = true;
+      return m;
+    }
+
+    const root = new THREE.Group();
+    scene.add(root);
+
+    // casco externo (sólido simplificado)
+    const shell = box(bodyW, bodyH, bodyD, matBody, bodyW / 2, bodyH / 2, bodyD / 2);
+    root.add(shell);
+
+    // cavidades (mais escuras por cima)
+    const lids = [];
+    const openState = DAYS.map(() => false);
+
+    for (let i = 0; i < 7; i++) {
+      const x = wall + gap + i * (cellW + gap) + cellW / 2;
+      const z = wall + gap + cellD / 2;
+      const cavity = box(cellW - 1, cellH - 1, cellD - 1, new THREE.MeshStandardMaterial({ color: 0xd7e0e6, roughness: 0.7 }), x, floor + (cellH - 1) / 2, z);
+      root.add(cavity);
+
+      // reed
+      root.add(box(14, 2.5, 2.5, matReed, x, floor + cellH - 3, z + cellD / 2 - 3));
+
+      // tampa com pivot na traseira
+      const pivot = new THREE.Group();
+      pivot.position.set(x, bodyH, z + cellD / 2 - 2);
+      const lid = box(cellW - 0.5, 2, cellD - 0.5, matLid, 0, 1, -(cellD / 2 - 2));
+      const mag = box(5, 1.5, 5, matMag, 0, 0.2, -4);
+      lid.add(mag);
+      pivot.add(lid);
+      root.add(pivot);
+      lids.push(pivot);
+
+      // label
+      const canvas2 = document.createElement("canvas");
+      canvas2.width = 128; canvas2.height = 64;
+      const ctx = canvas2.getContext("2d");
+      ctx.fillStyle = "#1f7a6c";
+      ctx.fillRect(0, 0, 128, 64);
+      ctx.fillStyle = "#fff";
+      ctx.font = "bold 36px Segoe UI";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(DAYS[i], 64, 34);
+      const tex = new THREE.CanvasTexture(canvas2);
+      const label = new THREE.Mesh(new THREE.PlaneGeometry(16, 8), new THREE.MeshBasicMaterial({ map: tex, transparent: true }));
+      label.position.set(0, 2.05, -(cellD / 2 - 2));
+      label.rotation.x = -Math.PI / 2;
+      pivot.add(label);
+    }
+
+    // baia ESP32
+    const espX = wall + gap + 7 * (cellW + gap) + wall + espW / 2;
+    const bay = box(espW - 2, 14, espD - 2, new THREE.MeshStandardMaterial({ color: 0xc9d5dc }), espX, floor + 7, bodyD / 2);
+    root.add(bay);
+    const board = box(52, 7, 28, matEsp, espX, floor + 5, bodyD / 2);
+    root.add(board);
+    // USB
+    root.add(box(2, 6, 10, new THREE.MeshStandardMaterial({ color: 0x888888 }), bodyW - 1, floor + 7, bodyD / 2));
+
+    // chão
+    const ground = new THREE.Mesh(
+      new THREE.CircleGeometry(220, 64),
+      new THREE.MeshStandardMaterial({ color: 0xdfe7ec, roughness: 1 })
+    );
+    ground.rotation.x = -Math.PI / 2;
+    ground.position.y = -0.2;
+    ground.receiveShadow = true;
+    scene.add(ground);
+
+    let alarmFlash = 0;
+    document.getElementById("btnOpen").onclick = () => {
+      const i = Math.floor(Math.random() * 7);
+      openState[i] = !openState[i];
+    };
+    document.getElementById("btnAlarm").onclick = () => {
+      alarmFlash = 1;
+      // simula “não abriu no horário”
+      for (let i = 0; i < 7; i++) if (!openState[i]) lids[i].userData.alarm = true;
+      setTimeout(() => {
+        alarmFlash = 0;
+        lids.forEach(l => l.userData.alarm = false);
+      }, 2500);
+    };
+
+    function resize() {
+      const w = innerWidth, h = innerHeight;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+    }
+    addEventListener("resize", resize);
+    resize();
+
+    const clock = new THREE.Clock();
+    function frame() {
+      const t = clock.getElapsedTime();
+      lids.forEach((pivot, i) => {
+        const target = openState[i] ? -1.15 : 0;
+        pivot.rotation.x += (target - pivot.rotation.x) * 0.08;
+        if (pivot.userData.alarm) {
+          const pulse = 0.5 + 0.5 * Math.sin(t * 12);
+          matLid.emissive = new THREE.Color().setHSL(0.02, 0.9, pulse * 0.25);
+        }
+      });
+      if (!alarmFlash) matLid.emissive.setHex(0x000000);
+      controls.update();
+      renderer.render(scene, camera);
+      requestAnimationFrame(frame);
+    }
+    frame();
+  </script>
+</body>
+</html>
