@@ -25,7 +25,7 @@ jobs:
       - name: Scan secrets (Gitleaks) — árvore atual
         run: |
           docker run --rm -v "$PWD:/repo" zricethezav/gitleaks:v8.21.2 \
-            detect --source=/repo --no-git --exit-code 1 -v
+            detect --source=/repo --no-git --config=/repo/.gitleaks.toml --exit-code 1 -v
       - name: Scan source (Semgrep)
         run: |
           docker run --rm -v "$PWD:/src" returntocorp/semgrep:1.97.0 \
