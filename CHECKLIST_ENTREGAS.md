@@ -15,7 +15,7 @@ Legenda: **Verificado** = executado localmente com evidência; **Preparado** = a
 | Um integrante envia cada disciplina | Responsável: Eduardo de Oliveira Nistal — RM94524. |
 | Presença nas aulas | Pendente externo (registro FIAP). |
 | Enviar no Teams até o prazo | Pendente externo. |
-| Links públicos na correção | MVP público via túnel `https://icy-lamps-give.loca.lt` (verificado). Repo GitHub e vídeos ainda pendentes. |
+| Links públicos na correção | Repo: https://github.com/eduardonistal/gs-citizentech-alerta-cidade. MVP túnel: `https://icy-lamps-give.loca.lt`. Vídeos ainda pendentes. |
 
 ## Situação por disciplina
 

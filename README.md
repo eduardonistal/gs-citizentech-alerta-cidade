@@ -36,7 +36,12 @@ npm test
 
 ## Estado real da entrega
 
-Artefatos locais ampliados e verificados em 14/11/2026: GenAI com placar RAG/agente > baseline (`qwen2.5:7b`), coleta Big Data com dois lotes reais em `chegada/`, RPA ponta a ponta no MVP, treino HSV de visão (sintético) e `npm test` 40/40. **Ainda não é submissão 100% do PDF**: faltam GitHub público, vídeos/YouTube, Teams, Airflow/Databricks com prints e deploy cloud. Detalhes em [`CHECKLIST_ENTREGAS.md`](./CHECKLIST_ENTREGAS.md).
+Artefatos locais ampliados e verificados em 14/11/2026: GenAI com placar RAG/agente > baseline (`qwen2.5:7b`), coleta Big Data com dois lotes reais em `chegada/`, RPA ponta a ponta no MVP, treino HSV de visão (sintético) e `npm test` 40/40.
+
+**Repositório público:** https://github.com/eduardonistal/gs-citizentech-alerta-cidade  
+**MVP (túnel):** https://icy-lamps-give.loca.lt  
+
+**Ainda faltam para 100% do PDF:** vídeos/YouTube, Teams, Airflow/Databricks com prints e deploy cloud permanente. Detalhes em [`CHECKLIST_ENTREGAS.md`](./CHECKLIST_ENTREGAS.md).
 
 Prazo geral indicado no PDF: **19/11/2026 às 23h55**, no Teams/portal de cada disciplina. O PDF limita cada equipe a cinco alunos da mesma turma e exige a mesma equipe e o mesmo produto em todas as disciplinas. Links públicos devem continuar funcionando durante a correção, que pode ocorrer até uma semana após o encerramento.
 

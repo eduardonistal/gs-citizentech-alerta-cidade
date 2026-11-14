@@ -61,7 +61,7 @@ Reunir dados públicos recentes, apresentar uma estimativa preliminar e rastreá
 
 - MVP local: `http://localhost:3000`.
 - URL pública (túnel ativo enquanto a máquina estiver ligada): `https://icy-lamps-give.loca.lt` — verificada em 14/11/2026 com `GET /api/health` e `/api/alerts`.
-- Repositório público GitHub: **pendente de autenticação `gh auth login` (código de dispositivo) e push**.
+- Repositório público GitHub: https://github.com/eduardonistal/gs-citizentech-alerta-cidade
 
 ## Indicadores e ODS
 
