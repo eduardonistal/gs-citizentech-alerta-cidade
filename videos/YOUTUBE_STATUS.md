@@ -1,14 +1,13 @@
 ﻿# YouTube — status 14/11/2026
 
-Uploads no canal UCN34oDw_KCVgC3Pk82nWt8Q (Studio):
+**Vídeos regenerados** com narração conversacional (estilo demo GS) + TTS rate -15% / pitch -2Hz.
 
-| Arquivo | Status upload | ID conhecido | URL |
-|---|---|---|---|
-| 01-generative-ai-demo.mp4 | 100% / rascunho | I9LtsCqTb1A | https://youtu.be/I9LtsCqTb1A |
-| 03-pitch-alerta-cidade.mp4 | 100% / rascunho | (abrir Editar rascunho no Studio) | |
-| 04-computer-vision-demo.mp4 | 100% / rascunho | | |
-| 05-rpa-demo.mp4 | 100% / rascunho | | |
+| Arquivo | Status | Nota |
+|---|---|---|
+| 01-generative-ai-demo.mp4 | regenerado localmente | reenviar no Studio (substitui rascunho antigo) |
+| 03-pitch-alerta-cidade.mp4 | regenerado localmente | reenviar |
+| 04-computer-vision-demo.mp4 | regenerado localmente | reenviar |
+| 05-rpa-demo.mp4 | regenerado localmente | reenviar |
 
-Próximo passo humano no Studio: para cada rascunho → Editar rascunho → Visibilidade → **Não listado** → Publicar → colar URL nos READMEs.
-
-Release GitHub (fallback): https://github.com/eduardonistal/gs-citizentech-alerta-cidade/releases/tag/videos-pt-br-2026-11-14
+Publicar como **Não listado** e colar URLs nos READMEs.
+Release anterior: https://github.com/eduardonistal/gs-citizentech-alerta-cidade/releases/tag/videos-pt-br-2026-11-14

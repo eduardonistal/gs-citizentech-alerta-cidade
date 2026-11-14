@@ -1,33 +1,33 @@
 WEBVTT
 
 1
-00:00:00.000 --> 00:00:08.000
-Olá. Sou Eduardo de Oliveira Nistal, RM nove quatro cinco dois quatro, único integrante do projeto Alerta Cidade.
+00:00:00.000 --> 00:00:16.000
+Fala. Eu sou o Eduardo de Oliveira Nistal, RM noventa e quatro mil quinhentos e vinte e quatro. Esse aqui é o pitch do Alerta Cidade, projeto solo da Global Solution.
 
 2
-00:00:08.000 --> 00:00:22.000
-Alerta Cidade ajuda pessoas a encontrar e interpretar informação pública sobre chuva, mostrando origem, horário e limites do dado. A previsão não confirma alagamento e não substitui a Defesa Civil.
+00:00:16.000 --> 00:00:47.000
+A ideia é bem direta. A gente sabe que tem dado público de chuva por aí, mas ele fica espalhado e às vezes é difícil de interpretar antes de sair de casa. Então a pergunta que a gente se fez foi: e se a gente organizasse isso de um jeito simples, mostrando de onde veio o dado e até onde ele vai?
 
 3
-00:00:22.000 --> 00:00:42.000
-Como evidência pública, consultei a API Open-Meteo para São Paulo. Em quatorze de novembro de dois mil e vinte e seis, a precipitação prevista no ponto demonstrativo foi de zero vírgula dez milímetros. Em seguida encaminhamos a canais oficiais, como a Defesa Civil.
+00:00:47.000 --> 00:01:16.000
+Como evidência pública, a gente consultou a Open-Meteo pra São Paulo. No dia quatorze de novembro de dois mil e vinte e seis, no ponto de demonstração, a precipitação prevista foi de zero vírgula um milímetro. Depois disso, a gente encaminha pra canais oficiais, tipo Defesa Civil. Olha: a previsão não confirma alagamento e não substitui autoridade.
 
 4
-00:00:42.000 --> 00:00:56.000
-A proposta organiza informação pública em linguagem simples, mostra de onde veio e quando foi atualizada, e encaminha aos canais oficiais. Não confirma alagamentos, não recomenda rotas e não substitui autoridades.
+00:01:16.000 --> 00:01:36.000
+O Alerta Cidade organiza informação pública em linguagem simples, mostra a fonte, o horário da atualização, e aponta o caminho oficial. A gente não recomenda rota, não emite alerta oficial e não inventa certeza onde o dado não chega.
 
 5
-00:00:56.000 --> 00:01:12.000
-O MVP Alerta Cidade está no repositório público no GitHub. Ele mostra status por área, fonte, horário e permite perguntas à base local com citações. A demonstração usa dados públicos ou lotes ingeridos pela automação.
+00:01:36.000 --> 00:01:55.000
+O MVP já tá no GitHub público. Ele mostra status por área, fonte, horário, e deixa a gente perguntar pra base local com citação. Na demo, a gente usa dado público ou lote que a automação mesmo ingeriu.
 
 6
-00:01:12.000 --> 00:01:29.000
-Os cidadãos são os usuários previstos. Os compradores potenciais seriam instituições, como municípios ou consórcios. O caminho é validar com usuários e órgãos, desenhar um piloto e só então avaliar contratação. Não temos preço validado nem comprador confirmado.
+00:01:55.000 --> 00:02:20.000
+Quem usa, na hipótese, é o cidadão. Quem poderia comprar depois seriam municípios ou consórcios. O caminho é validar com usuário e órgão, desenhar um piloto pequeno, e só então falar de contratação. A gente ainda não tem preço validado nem comprador fechado, e isso a gente deixa explícito.
 
 7
-00:01:29.000 --> 00:01:44.000
-A proposta se alinha tematicamente aos ODS onze e treze. Os indicadores planejados incluem disponibilidade da fonte, compreensão dos avisos e encaminhamento oficial. Ainda não há linha de base nem impacto medido.
+00:02:20.000 --> 00:02:43.000
+Tematicamente a gente se alinha aos ODS onze e treze. Os indicadores que a gente planeja medir são bem práticos: a fonte ficou disponível? a pessoa entendeu o aviso? e ela foi encaminhada pro canal oficial? Ainda não tem linha de base nem impacto medido.
 
 8
-00:01:44.000 --> 00:01:53.000
-Nosso pedido é conversar com usuários e instituições interessadas para desenhar e avaliar um piloto, sem presumir parceria. Obrigado.
+00:02:43.000 --> 00:02:56.000
+O pedido é simples: conversar com usuários e instituições interessadas pra desenhar e avaliar um piloto delimitado e seguro, sem presumir parceria. E é isso. Obrigado.

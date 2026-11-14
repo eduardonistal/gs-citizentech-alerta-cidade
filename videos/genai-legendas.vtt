@@ -1,21 +1,21 @@
 WEBVTT
 
 1
-00:00:00.000 --> 00:00:13.000
-Sou Eduardo de Oliveira Nistal, RM nove quatro cinco dois quatro. Esta é a demonstração do componente de inteligência artificial generativa do Alerta Cidade, rodando com modelo local.
+00:00:00.000 --> 00:00:16.000
+Fala. Eu sou o Eduardo, RM noventa e quatro mil quinhentos e vinte e quatro. Agora a gente vai ver o pedaço de IA generativa do Alerta Cidade, rodando com modelo local.
 
 2
-00:00:13.000 --> 00:00:22.000
-Comparamos o mesmo modelo em três modos: baseline sem contexto, RAG com recuperação de trechos e agente especializado de prevenção.
+00:00:16.000 --> 00:00:33.000
+A gente compara o mesmo modelo em três modos. Baseline sem contexto. RAG puxando trechos da base. E um agente mais especializado em prevenção. A ideia é mostrar a diferença na prática, né?
 
 3
-00:00:22.000 --> 00:00:40.000
-Na rodada verificada com qwen dois ponto cinco sete bê, o baseline obteve conformidade de zero vírgula três três três. RAG e agente chegaram a um ponto zero. O recall na posição três da recuperação lexical foi um ponto zero.
+00:00:33.000 --> 00:00:59.000
+Na rodada verificada com o Qwen dois ponto cinco de sete bilhões, o baseline ficou em cerca de trinta e três por cento de conformidade. Já o RAG e o agente chegaram a cem por cento. E o recall na posição três da recuperação lexical também fechou em cem por cento.
 
 4
-00:00:40.000 --> 00:00:54.000
-Perguntas sem evidência na base, como população exata de bairro ou rota de fuga, são recusadas com citações vazias, em conformidade com a LGPD e com os limites do produto.
+00:00:59.000 --> 00:01:16.000
+Quando a pergunta não tem evidência na base, tipo população exata de bairro ou rota de fuga, a gente recusa. Sem inventar. Sem citação falsa. Isso respeita a LGPD e os limites do produto.
 
 5
-00:00:54.000 --> 00:01:04.000
-Código, base de conhecimento, casos de teste, notebook e erros reais estão no repositório público. A IA não substitui orientação oficial.
+00:01:16.000 --> 00:01:32.000
+Código, base, casos de teste, notebook e os erros reais que a gente corrigiu estão no repositório público. E um ponto importante: a IA não substitui orientação oficial. E é isso.

@@ -1,6 +1,8 @@
 # Vídeos gerados automaticamente
 
-Gerados em 2026-11-14T19:38:15.294Z com narração `pt-BR-AntonioNeural` (Edge TTS, voz masculina) e slides locais.
+Gerados em 2026-11-14T21:44:18.855Z com narração `pt-BR-AntonioNeural` (Edge TTS).
+
+**Estilo:** baseado em demos GS conversacionais (abertura casual, números por extenso, ritmo mais lento, pausas curtas). Rate `-15%`, pitch `-2Hz`.
 
 ## Arquivos
 

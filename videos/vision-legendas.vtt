@@ -1,17 +1,17 @@
 WEBVTT
 
 1
-00:00:00.000 --> 00:00:11.000
-Sou Eduardo de Oliveira Nistal, RM nove quatro cinco dois quatro. Este componente experimental procura indícios visuais de água sobre via para revisão humana.
+00:00:00.000 --> 00:00:16.000
+Beleza. Eu sou o Eduardo, RM noventa e quatro mil quinhentos e vinte e quatro. Esse componente é experimental: ele procura indício visual de água sobre a via, pra revisão humana.
 
 2
-00:00:11.000 --> 00:00:21.000
-O modelo não confirma alagamento, não emite alerta oficial e não recomenda rotas. Casos de baixa confiança vão para revisão humana.
+00:00:16.000 --> 00:00:31.000
+Olha os limites, porque isso importa. O modelo não confirma alagamento, não emite alerta oficial e não recomenda rota. Se a confiança fica baixa, o caso vai pra pessoa revisar.
 
 3
-00:00:21.000 --> 00:00:33.000
-Executamos um treino leve de limiares HSV sobre amostras sintéticas geradas localmente, com precisão, recall e F1 iguais a um. Essas amostras não são fotografias reais.
+00:00:31.000 --> 00:00:48.000
+A gente rodou um treino leve de limiares HSV em amostras sintéticas geradas localmente. Precisão, recall e F1 fecharam em um. E essas amostras a gente declara abertamente: não são fotos reais de rua.
 
 4
-00:00:33.000 --> 00:00:43.000
-O caminho YOLO permanece preparado para quando houver dataset fotográfico licenciado e pesos locais. Até lá, os resultados sintéticos ficam explicitamente rotulados.
+00:00:48.000 --> 00:01:04.000
+O caminho YOLO já tá preparado pra quando a gente tiver dataset fotográfico licenciado e pesos locais. Até lá, o resultado sintético fica rotulado como sintético. Sem exagero. E é isso.
