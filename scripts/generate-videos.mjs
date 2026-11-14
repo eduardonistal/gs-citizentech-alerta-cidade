@@ -7,7 +7,7 @@ import { EdgeTTS } from 'node-edge-tts';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const outRoot = path.join(root, 'videos');
-const voice = 'pt-BR-FranciscaNeural';
+const voice = 'pt-BR-AntonioNeural';
 const ffmpeg = findFfmpeg();
 
 const videos = {
@@ -260,7 +260,7 @@ for (const [key, config] of Object.entries(videos)) {
 }
 await writeFile(path.join(outRoot, 'README.md'), `# Vídeos gerados automaticamente
 
-Gerados em ${new Date().toISOString()} com narração \`pt-BR-FranciscaNeural\` (Edge TTS) e slides locais.
+Gerados em ${new Date().toISOString()} com narração \`pt-BR-AntonioNeural\` (Edge TTS, voz masculina) e slides locais.
 
 ## Arquivos
 
