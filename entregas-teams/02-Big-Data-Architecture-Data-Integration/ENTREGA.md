@@ -7,7 +7,7 @@
 ## Links
 
 - **repositorio:** https://github.com/eduardonistal/gs-citizentech-alerta-cidade
-- **mvp:** https://silver-carrots-throw.loca.lt
+- **mvp:** https://journey-formatting-alone-swing.trycloudflare.com
 - **youtube:** N/A (disciplina sem vídeo obrigatório no mesmo formato)
 
 ## Conteúdo deste ZIP

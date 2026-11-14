@@ -10,7 +10,7 @@
 - **video_local:** video-demo.mp4
 - **video_release:** https://github.com/eduardonistal/gs-citizentech-alerta-cidade/releases/download/videos-pt-br-2026-11-14/01-generative-ai-demo.mp4
 - **youtube:** [COLE URL NÃO LISTADA]
-- **mvp:** https://silver-carrots-throw.loca.lt
+- **mvp:** https://journey-formatting-alone-swing.trycloudflare.com
 
 ## Conteúdo deste ZIP
 

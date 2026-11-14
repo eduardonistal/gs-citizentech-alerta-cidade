@@ -7,7 +7,7 @@
 ## Links
 
 - **repositorio:** https://github.com/eduardonistal/gs-citizentech-alerta-cidade
-- **mvp:** https://silver-carrots-throw.loca.lt
+- **mvp:** https://journey-formatting-alone-swing.trycloudflare.com
 - **video_local:** video-demo.mp4
 - **video_release:** https://github.com/eduardonistal/gs-citizentech-alerta-cidade/releases/download/videos-pt-br-2026-11-14/05-rpa-demo.mp4
 - **youtube:** [COLE URL NÃO LISTADA]

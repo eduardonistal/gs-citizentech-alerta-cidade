@@ -8,7 +8,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const outRoot = path.join(root, 'entregas-teams');
 const repo = 'https://github.com/eduardonistal/gs-citizentech-alerta-cidade';
 const release = `${repo}/releases/tag/videos-pt-br-2026-11-14`;
-const mvp = 'https://silver-carrots-throw.loca.lt';
+const mvp = 'https://journey-formatting-alone-swing.trycloudflare.com';
 
 const packs = [
   {
