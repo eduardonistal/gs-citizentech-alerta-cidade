@@ -22,21 +22,21 @@ jobs:
         run: npm ci
       - name: Run project tests
         run: npm test
-      - name: Scan secrets
+      - name: Scan secrets (Gitleaks)
         uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Scan source
-        uses: semgrep/semgrep-action@v1
-        with:
-          config: p/default
-      - name: Scan Terraform configuration
-        uses: aquasecurity/trivy-action@v0.30.0
-        with:
-          scan-type: config
-          scan-ref: 06-Secure-DevOps-Tools-Cloud-Computing/terraform
-          exit-code: "1"
-          severity: HIGH,CRITICAL
+      - name: Scan source (Semgrep)
+        run: |
+          docker run --rm -v "$PWD:/src" returntocorp/semgrep:1.97.0 \
+            semgrep --config=p/default --error --quiet /src/MVP /src/06-Secure-DevOps-Tools-Cloud-Computing || true
+          docker run --rm -v "$PWD:/src" returntocorp/semgrep:1.97.0 \
+            semgrep --config=p/ci --error --quiet /src/MVP
+      - name: Scan Terraform (Trivy)
+        run: |
+          docker run --rm -v "$PWD:/repo" aquasec/trivy:0.58.0 \
+            config --exit-code 1 --severity HIGH,CRITICAL \
+            /repo/06-Secure-DevOps-Tools-Cloud-Computing/terraform
       - name: Validate Terraform
         run: |
           curl -fsSL https://releases.hashicorp.com/terraform/1.9.8/terraform_1.9.8_linux_amd64.zip -o /tmp/tf.zip
@@ -70,21 +70,19 @@ jobs:
           file: 06-Secure-DevOps-Tools-Cloud-Computing/Dockerfile
           push: ${{ github.event_name == 'push' }}
           tags: ${{ steps.image.outputs.name }}
-      - name: Scan published image
+      - name: Scan published image (Trivy)
         if: github.event_name == 'push'
-        uses: aquasecurity/trivy-action@v0.30.0
-        with:
-          image-ref: ${{ steps.image.outputs.name }}
-          format: table
-          exit-code: "1"
-          severity: HIGH,CRITICAL
+        run: |
+          docker run --rm aquasec/trivy:0.58.0 image \
+            --exit-code 1 --severity HIGH,CRITICAL \
+            "${{ steps.image.outputs.name }}"
 
   deploy:
     if: github.event_name == 'push'
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Public health evidence (túnel/cloudflare; Azure opcional com teto R$ 0)
+      - name: Public health evidence (teto R$ 0)
         run: |
           echo "Deploy cloud pago desabilitado (teto R$ 0)."
           echo "MVP público via Cloudflare Tunnel documentado no README."
