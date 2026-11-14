@@ -39,7 +39,7 @@ npm test
 Artefatos locais ampliados e verificados em 14/11/2026: GenAI com placar RAG/agente > baseline (`qwen2.5:7b`), coleta Big Data com dois lotes reais em `chegada/`, RPA ponta a ponta no MVP, treino HSV de visão (sintético) e `npm test` 40/40.
 
 **Repositório público:** https://github.com/eduardonistal/gs-citizentech-alerta-cidade  
-**MVP (túnel):** https://sweet-moose-pump.loca.lt  
+**MVP (túnel):** https://silver-carrots-throw.loca.lt  
 
 **Vídeos prontos** (narração pt-BR): [`videos/`](./videos/) — regenerar com `npm run generate-videos`.  
 **Download público:** https://github.com/eduardonistal/gs-citizentech-alerta-cidade/releases/tag/videos-pt-br-2026-11-14  
