@@ -15,13 +15,13 @@ Legenda: **Verificado** = executado localmente com evidência; **Preparado** = a
 | Um integrante envia cada disciplina | Eduardo de Oliveira Nistal — RM94524. |
 | Presença nas aulas | Pendente externo (registro FIAP). |
 | Enviar no Teams até o prazo | ZIPs prontos em `entregas-teams/`; upload Teams pendente. |
-| Links públicos na correção | Repo: https://github.com/eduardonistal/gs-citizentech-alerta-cidade. Vídeos (release): https://github.com/eduardonistal/gs-citizentech-alerta-cidade/releases/tag/videos-pt-br-2026-11-14. MVP HTTPS: https://journey-formatting-alone-swing.trycloudflare.com. CI verde: https://github.com/eduardonistal/gs-citizentech-alerta-cidade/actions/runs/43638056256. Falta YouTube não listado. |
+| Links públicos na correção | Repo: https://github.com/eduardonistal/gs-citizentech-alerta-cidade. Vídeos (release): https://github.com/eduardonistal/gs-citizentech-alerta-cidade/releases/tag/videos-pt-br-2026-11-14. MVP HTTPS: https://journey-formatting-alone-swing.trycloudflare.com. CI verde: https://github.com/eduardonistal/gs-citizentech-alerta-cidade/actions/runs/43638056256. 4 MP4 enviados ao YouTube Studio (rascunhos); GenAI https://youtu.be/I9LtsCqTb1A — falta publicar como Não listado + colar URLs. |
 
 ## Situação por disciplina
 
 | Disciplina | Atendido agora | Ainda pendente para 100% do PDF |
 |---|---|---|
-| **Generative AI (p. 29–31)** | Base+fontes; 6 casos; recall; agente vs RAG; benchmark; notebook; vídeo local. | YouTube não listado + URL no README + Teams. |
+| **Generative AI (p. 29–31)** | Base+fontes; 6 casos; recall; agente vs RAG; benchmark; notebook; vídeo local. | Publicar rascunhos YouTube como Não listado + URLs nos READMEs + Teams. |
 | **Big Data (p. 32–38)** | 2 fontes; DAG; Bronze/Prata/Ouro; Airflow 2 success + prints; lakehouse local; signup Free Edition iniciado (dudunistal@gmail.com). | Resolver CAPTCHA Databricks → Volume + prints + Teams. |
 | **BI & Startup (p. 41–42)** | Pitch 5 min; Open-Meteo; ODS; vídeo local. | YouTube não listado + Teams. |
 | **Computer Vision (p. 43–44)** | YOLO+HSV; PDF; dataset Openverse; vídeo local. | YouTube + Teams. |
@@ -32,3 +32,4 @@ Legenda: **Verificado** = executado localmente com evidência; **Preparado** = a
 
 **CI DevSecOps está verde** e os pacotes Teams foram regenerados.  
 **Bloqueios humanos restantes:** CAPTCHA Databricks, upload YouTube (seletor de arquivos), envio no Teams.
+
