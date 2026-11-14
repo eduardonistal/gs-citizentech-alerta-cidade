@@ -15,7 +15,7 @@ Legenda: **Verificado** = executado localmente com evidência; **Preparado** = a
 | Um integrante envia cada disciplina | Responsável: Eduardo de Oliveira Nistal — RM94524. |
 | Presença nas aulas | Pendente externo (registro FIAP). |
 | Enviar no Teams até o prazo | Pendente externo. |
-| Links públicos na correção | Repo: https://github.com/eduardonistal/gs-citizentech-alerta-cidade. MVP túnel: `https://sweet-moose-pump.loca.lt`. Vídeos locais prontos em [`videos/`](./videos/) (narração pt-BR); falta publicar no YouTube não listado e colar URLs. |
+| Links públicos na correção | Repo: https://github.com/eduardonistal/gs-citizentech-alerta-cidade. Vídeos públicos (release): https://github.com/eduardonistal/gs-citizentech-alerta-cidade/releases/tag/videos-pt-br-2026-11-14. Falta YouTube não listado + Teams. |
 
 ## Situação por disciplina
 

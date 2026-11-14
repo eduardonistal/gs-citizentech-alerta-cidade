@@ -41,7 +41,8 @@ Artefatos locais ampliados e verificados em 14/11/2026: GenAI com placar RAG/age
 **Repositório público:** https://github.com/eduardonistal/gs-citizentech-alerta-cidade  
 **MVP (túnel):** https://sweet-moose-pump.loca.lt  
 
-**Vídeos locais prontos** (narração pt-BR): [`videos/`](./videos/) — regenerar com `npm run generate-videos`.  
+**Vídeos prontos** (narração pt-BR): [`videos/`](./videos/) — regenerar com `npm run generate-videos`.  
+**Download público:** https://github.com/eduardonistal/gs-citizentech-alerta-cidade/releases/tag/videos-pt-br-2026-11-14  
 **Ainda faltam para 100% do PDF:** YouTube não listado, Teams, Airflow/Databricks com prints e deploy cloud permanente. Detalhes em [`CHECKLIST_ENTREGAS.md`](./CHECKLIST_ENTREGAS.md).
 
 Prazo geral indicado no PDF: **19/11/2026 às 23h55**, no Teams/portal de cada disciplina. O PDF limita cada equipe a cinco alunos da mesma turma e exige a mesma equipe e o mesmo produto em todas as disciplinas. Links públicos devem continuar funcionando durante a correção, que pode ocorrer até uma semana após o encerramento.
