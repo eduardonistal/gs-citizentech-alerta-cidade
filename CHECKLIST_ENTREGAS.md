@@ -1,4 +1,4 @@
-# Conferência das entregas contra o PDF
+﻿# Conferência das entregas contra o PDF
 
 **Escopo:** seis disciplinas; Project-Based Maker Lab excluída.  
 **Fonte normativa:** [PDF oficial](./docs/Desafio-FIAP-GS-CitizenTech%204ES.pdf).  
@@ -26,7 +26,7 @@ Legenda: **Verificado** = executado localmente com evidência; **Preparado** = a
 | **BI & Startup (p. 41–42)** | Roteiro 5 min com evidência Open-Meteo verificada (0,10 mm em 14/11/2026); modelo de negócio; ODS 11/13. Vídeo local: [`videos/03-pitch-alerta-cidade.mp4`](./videos/03-pitch-alerta-cidade.mp4). | YouTube não listado + MVP URL estável + Teams. |
 | **Computer Vision (p. 43–44)** | Código YOLO + treino HSV **executado** (F1=1,000 sintético); PDF com título, integrante, resumo≈250, objetivo≈50, ferramentas, metodologia, resultados, conclusão. Vídeo local: [`videos/04-computer-vision-demo.mp4`](./videos/04-computer-vision-demo.mp4). | Dataset fotográfico licenciado + YouTube + Teams. |
 | **RPA (p. 45–50)** | Mapa/BPMN; decisão+loop; exceções; logs sanitizados; **execução ponta a ponta verificada** (3 itens publicados no MVP); testes sucesso/falha; README. Vídeo local: [`videos/05-rpa-demo.mp4`](./videos/05-rpa-demo.mp4). | YouTube ≤3 min + PDF com links finais + Teams. |
-| **Secure DevOps (p. 51–53)** | Dockerfile/Compose/TF; Prometheus+Grafana up; alerta **firing** (`evidencias/prometheus-alerts-firing.*`); Gitleaks bloqueio→limpo; Trivy/Semgrep logs; MVP HTTPS Cloudflare; custo R$ 0. | CI GitHub Actions (escopo `workflow`), Terraform apply (bloqueado R$ 0), Teams. |
+| **Secure DevOps (p. 51–53)** | Dockerfile/Compose/TF; Prometheus+Grafana up; alerta **firing**; Gitleaks barrada→limpa; Trivy imagem barrada→corrigida; Semgrep; **CI GitHub Actions verde** (security+build+deploy): https://github.com/eduardonistal/gs-citizentech-alerta-cidade/actions/runs/43638056256; MVP HTTPS Cloudflare; custo R$ 0. | Terraform apply Azure (bloqueado R$ 0), Teams. |
 
 ## Resultado
 
@@ -39,3 +39,4 @@ Legenda: **Verificado** = executado localmente com evidência; **Preparado** = a
 2. Manter MVP público (túnel local ou Vercel/Render). Regenerar: `npm run generate-videos`.
 3. Subir DAG no Airflow + lotes no Databricks Free Edition e capturar prints.
 4. Enviar cada PDF/link no **Teams** da disciplina até 19/11/2026 23h55.
+

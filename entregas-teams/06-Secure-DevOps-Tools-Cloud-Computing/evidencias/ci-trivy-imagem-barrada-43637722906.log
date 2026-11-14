@@ -1,0 +1,91 @@
+﻿build	Scan published image (Trivy)	﻿2026-11-14T20:29:59.2888703Z ##[group]Run docker run --rm aquasec/trivy:0.58.0 image \
+build	Scan published image (Trivy)	2026-11-14T20:29:59.2889111Z ^[[36;1mdocker run --rm aquasec/trivy:0.58.0 image \^[[0m
+build	Scan published image (Trivy)	2026-11-14T20:29:59.2889383Z ^[[36;1m  --exit-code 1 --severity HIGH,CRITICAL \^[[0m
+build	Scan published image (Trivy)	2026-11-14T20:29:59.2889793Z ^[[36;1m  "ghcr.io/eduardonistal/gs-citizentech-alerta-cidade:540be98ad30631dc9d6d58db6b51e7d20f1cf57a"^[[0m
+build	Scan published image (Trivy)	2026-11-14T20:29:59.2907137Z shell: /usr/bin/bash -e {0}
+build	Scan published image (Trivy)	2026-11-14T20:29:59.2907347Z ##[endgroup]
+build	Scan published image (Trivy)	2026-11-14T20:29:59.3060703Z Unable to find image 'aquasec/trivy:0.58.0' locally
+build	Scan published image (Trivy)	2026-11-14T20:30:00.0001335Z 0.58.0: Pulling from aquasec/trivy
+build	Scan published image (Trivy)	2026-11-14T20:30:00.2301620Z 75f754ff05a4: Pulling fs layer
+build	Scan published image (Trivy)	2026-11-14T20:30:00.2302046Z 79a8be22156d: Pulling fs layer
+build	Scan published image (Trivy)	2026-11-14T20:30:00.2302634Z da9db072f522: Pulling fs layer
+build	Scan published image (Trivy)	2026-11-14T20:30:00.2302962Z 4ea9a0de95f1: Pulling fs layer
+build	Scan published image (Trivy)	2026-11-14T20:30:00.4086013Z 75f754ff05a4: Download complete
+build	Scan published image (Trivy)	2026-11-14T20:30:00.4087079Z da9db072f522: Download complete
+build	Scan published image (Trivy)	2026-11-14T20:30:00.4104760Z da9db072f522: Pull complete
+build	Scan published image (Trivy)	2026-11-14T20:30:00.5080979Z 79a8be22156d: Download complete
+build	Scan published image (Trivy)	2026-11-14T20:30:00.6079933Z 4ea9a0de95f1: Download complete
+build	Scan published image (Trivy)	2026-11-14T20:30:00.6096171Z 79a8be22156d: Pull complete
+build	Scan published image (Trivy)	2026-11-14T20:30:01.0249972Z 75f754ff05a4: Pull complete
+build	Scan published image (Trivy)	2026-11-14T20:30:01.0256265Z 4ea9a0de95f1: Pull complete
+build	Scan published image (Trivy)	2026-11-14T20:30:01.0257059Z Digest: sha256:b88012e2a0a309d6a8a00463d4e63e5e513377fb74eccbc8f9b0f8f81940ebeb
+build	Scan published image (Trivy)	2026-11-14T20:30:01.0257741Z Status: Downloaded newer image for aquasec/trivy:0.58.0
+build	Scan published image (Trivy)	2026-11-14T20:30:01.6744274Z 2026-11-14T20:30:01Z	INFO	[vulndb] Need to update DB
+build	Scan published image (Trivy)	2026-11-14T20:30:01.6744809Z 2026-11-14T20:30:01Z	INFO	[vulndb] Downloading vulnerability DB...
+build	Scan published image (Trivy)	2026-11-14T20:30:01.6745425Z 2026-11-14T20:30:01Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+build	Scan published image (Trivy)	2026-11-14T20:30:06.2387867Z 27.68 MiB / 134.33 MiB [------------>_______________________________________________] 20.61% ? p/s ?74.65 MiB / 134.33 MiB [--------------------------------->__________________________] 55.57% ? p/s ?133.88 MiB / 134.33 MiB [---------------------------------------------------------->] 99.67% ? p/s ?134.33 MiB / 134.33 MiB [------------------------------------------->] 100.00% 177.73 MiB p/s ETA 0s134.33 MiB / 134.33 MiB [------------------------------------------->] 100.00% 177.73 MiB p/s ETA 0s134.33 MiB / 134.33 MiB [------------------------------------------->] 100.00% 177.73 MiB p/s ETA 0s134.33 MiB / 134.33 MiB [------------------------------------------->] 100.00% 166.26 MiB p/s ETA 0s134.33 MiB / 134.33 MiB [------------------------------------------->] 100.00% 166.26 MiB p/s ETA 0s134.33 MiB / 134.33 MiB [------------------------------------------->] 100.00% 166.26 MiB p/s ETA 0s134.33 MiB / 134.33 MiB [------------------------------------------->] 100.00% 155.54 MiB p/s ETA 0s134.33 MiB / 134.33 MiB [------------------------------------------->] 100.00% 155.54 MiB p/s ETA 0s134.33 MiB / 134.33 MiB [------------------------------------------->] 100.00% 155.54 MiB p/s ETA 0s134.33 MiB / 134.33 MiB [------------------------------------------->] 100.00% 145.50 MiB p/s ETA 0s134.33 MiB / 134.33 MiB [------------------------------------------->] 100.00% 145.50 MiB p/s ETA 0s134.33 MiB / 134.33 MiB [------------------------------------------->] 100.00% 145.50 MiB p/s ETA 0s134.33 MiB / 134.33 MiB [------------------------------------------->] 100.00% 136.12 MiB p/s ETA 0s134.33 MiB / 134.33 MiB [-----------------------------------------------] 100.00% 43.01 MiB p/s 3.3s2026-11-14T20:30:06Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+build	Scan published image (Trivy)	2026-11-14T20:30:06.2391828Z 2026-11-14T20:30:06Z	INFO	[vuln] Vulnerability scanning is enabled
+build	Scan published image (Trivy)	2026-11-14T20:30:06.2392198Z 2026-11-14T20:30:06Z	INFO	[secret] Secret scanning is enabled
+build	Scan published image (Trivy)	2026-11-14T20:30:06.2392627Z 2026-11-14T20:30:06Z	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+build	Scan published image (Trivy)	2026-11-14T20:30:06.2393586Z 2026-11-14T20:30:06Z	INFO	[secret] Please see also https://aquasecurity.github.io/trivy/v0.58/docs/scanner/secret#recommendation for faster secret detection
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3239280Z 2026-11-14T20:30:08Z	INFO	Detected OS	family="alpine" version="3.24.4"
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3239980Z 2026-11-14T20:30:08Z	WARN	This OS version is not on the EOL list	family="alpine" version="3.24"
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3240687Z 2026-11-14T20:30:08Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=19
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3251690Z 2026-11-14T20:30:08Z	INFO	Number of language-specific files	num=1
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3252185Z 2026-11-14T20:30:08Z	INFO	[node-pkg] Detecting vulnerabilities...
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3279335Z 2026-11-14T20:30:08Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://aquasecurity.github.io/trivy/v0.58/docs/scanner/vulnerability#severity-selection for details.
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3288392Z 
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3289199Z ghcr.io/eduardonistal/gs-citizentech-alerta-cidade:540be98ad30631dc9d6d58db6b51e7d20f1cf57a (alpine 3.24.4)
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3290057Z ===========================================================================================================
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3290537Z Total: 0 (HIGH: 0, CRITICAL: 0)
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3290840Z 
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3309688Z 2026-11-14T20:30:08Z	INFO	Table result includes only package filenames. Use '--format json' option to get the full path to the package file.
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3443321Z 
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3443615Z Node.js (node-pkg)
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3443873Z ==================
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3444145Z Total: 10 (HIGH: 10, CRITICAL: 0)
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3444333Z 
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3445176Z ┌────────────────────────────────┬─────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────┬────────────────────────────────────────────────────────────┐
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3446304Z │            Library             │  Vulnerability  │ Severity │ Status │ Installed Version │        Fixed Version         │                           Title                            │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3447557Z ├────────────────────────────────┼─────────────────┼──────────┼────────┼───────────────────┼──────────────────────────────┼────────────────────────────────────────────────────────────┤
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3448885Z │ brace-expansion (package.json) │ CVE-2026-102276 │ HIGH     │ fixed  │ 2.0.2             │ 5.0.10, 3.0.7, 2.1.5, 1.1.19 │ brace-expansion: brace-expansion: Denial of Service via    │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3449997Z │                                │                 │          │        │                   │                              │ stack exhaustion from crafted brace patterns...            │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3450922Z │                                │                 │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-102276                │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3451882Z │                                ├─────────────────┤          │        │                   ├──────────────────────────────┼────────────────────────────────────────────────────────────┤
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3452907Z │                                │ CVE-2026-102278 │          │        │                   │ 5.0.11, 3.0.8, 2.1.6, 1.1.20 │ brace-expansion: brace-expansion: Denial of Service via    │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3453908Z │                                │                 │          │        │                   │                              │ uncontrolled recursion in nested brace patterns...         │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3454821Z │                                │                 │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-102278                │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3455775Z │                                ├─────────────────┤          │        │                   ├──────────────────────────────┼────────────────────────────────────────────────────────────┤
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3457015Z │                                │ CVE-2026-13149  │          │        │                   │ 5.0.7, 1.1.16, 2.1.2         │ brace-expansion: Brace-expansion: Denial of Service due to │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3458094Z │                                │                 │          │        │                   │                              │ exponential-time complexity                                │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3459126Z │                                │                 │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-13149                 │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3460080Z │                                ├─────────────────┤          │        │                   ├──────────────────────────────┼────────────────────────────────────────────────────────────┤
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3461072Z │                                │ CVE-2026-14257  │          │        │                   │ 5.0.8, 3.0.3, 2.1.3, 1.1.17  │ brace-expansion: Brace-expansion: Denial of Service via    │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3462122Z │                                │                 │          │        │                   │                              │ memory exhaustion in expand() function                     │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3463062Z │                                │                 │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-14257                 │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3464014Z │                                ├─────────────────┤          │        │                   ├──────────────────────────────┼────────────────────────────────────────────────────────────┤
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3464982Z │                                │ CVE-2026-69152  │          │        │                   │ 1.1.18, 2.1.4, 3.0.6, 5.0.9  │ brace-expansion: DoS via unbounded intermediate arrays,    │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3465956Z │                                │                 │          │        │                   │                              │ bypassing the CVE-2026-14257 mitigation                    │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3466879Z │                                │                 │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-69152                 │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3467888Z ├────────────────────────────────┼─────────────────┤          │        ├───────────────────┼──────────────────────────────┼────────────────────────────────────────────────────────────┤
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3469244Z │ ip-address (package.json)      │ CVE-2026-69192  │          │        │ 10.1.0            │ 10.3.1                       │ ip-address: ip-address: Inconsistent IP address parsing    │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3470274Z │                                │                 │          │        │                   │                              │ leads to Server-Side Request Forgery (SSRF)...             │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3471169Z │                                │                 │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-69192                 │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3472367Z ├────────────────────────────────┼─────────────────┤          │        ├───────────────────┼──────────────────────────────┼────────────────────────────────────────────────────────────┤
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3473416Z │ pacote (package.json)          │ CVE-2026-9496   │          │        │ 19.0.2            │ 21.5.1                       │ pacote: Pacote: Denial of Service via crafted spec.rawSpec │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3474407Z │                                │                 │          │        │                   │                              │ value in addGitSha function...                             │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3475273Z │                                │                 │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-9496                  │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3476155Z │                                │                 │          │        ├───────────────────┤                              │                                                            │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3476977Z │                                │                 │          │        │ 20.0.1            │                              │                                                            │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3477774Z │                                │                 │          │        │                   │                              │                                                            │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3478686Z │                                │                 │          │        │                   │                              │                                                            │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3479646Z ├────────────────────────────────┼─────────────────┤          │        ├───────────────────┼──────────────────────────────┼────────────────────────────────────────────────────────────┤
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3480745Z │ picomatch (package.json)       │ CVE-2026-33671  │          │        │ 4.0.3             │ 4.0.4, 3.0.2, 2.3.2          │ picomatch: Picomatch: Regular Expression Denial of Service │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3481873Z │                                │                 │          │        │                   │                              │ via crafted extglob patterns                               │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3482774Z │                                │                 │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-33671                 │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3483778Z ├────────────────────────────────┼─────────────────┤          │        ├───────────────────┼──────────────────────────────┼────────────────────────────────────────────────────────────┤
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3484832Z │ sigstore (package.json)        │ CVE-2026-48815  │          │        │ 3.1.0             │ 4.1.1                        │ sigstore: Sigstore: Unauthorized certificates accepted due │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3485914Z │                                │                 │          │        │                   │                              │ to ignored `certificateOIDs` verification option           │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3486837Z │                                │                 │          │        │                   │                              │ https://avd.aquasec.com/nvd/cve-2026-48815                 │
+build	Scan published image (Trivy)	2026-11-14T20:30:08.3487873Z └────────────────────────────────┴─────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────┴────────────────────────────────────────────────────────────┘
+build	Scan published image (Trivy)	2026-11-14T20:30:08.4127840Z ##[error]Process completed with exit code 1.

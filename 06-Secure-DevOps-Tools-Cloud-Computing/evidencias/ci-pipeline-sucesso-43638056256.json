@@ -1,0 +1,1 @@
+﻿{"conclusion":"success","jobs":[{"conclusion":"success","name":"security"},{"conclusion":"success","name":"build"},{"conclusion":"success","name":"deploy"}],"sha":"e1def233c210a19cc3d942703d10526f45a2f2b2","title":"Strip npm from runtime image so Trivy image scan can pass.","url":"https://github.com/eduardonistal/gs-citizentech-alerta-cidade/actions/runs/43638056256"}
