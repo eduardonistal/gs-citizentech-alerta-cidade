@@ -1,0 +1,8 @@
+title = "Alerta Cidade GS"
+
+[allowlist]
+description = "Evidências de teste controlado e artefatos gerados"
+paths = [
+  '''(?i)evidencias/ci-gitleaks-blocked\.txt$''',
+  '''(?i)entregas-teams/.*/evidencias/ci-gitleaks-blocked\.txt$''',
+]

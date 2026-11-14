@@ -22,16 +22,14 @@ jobs:
         run: npm ci
       - name: Run project tests
         run: npm test
-      - name: Scan secrets (Gitleaks)
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Scan secrets (Gitleaks) — árvore atual
+        run: |
+          docker run --rm -v "$PWD:/repo" zricethezav/gitleaks:v8.21.2 \
+            detect --source=/repo --no-git --exit-code 1 -v
       - name: Scan source (Semgrep)
         run: |
           docker run --rm -v "$PWD:/src" returntocorp/semgrep:1.97.0 \
-            semgrep --config=p/default --error --quiet /src/MVP /src/06-Secure-DevOps-Tools-Cloud-Computing || true
-          docker run --rm -v "$PWD:/src" returntocorp/semgrep:1.97.0 \
-            semgrep --config=p/ci --error --quiet /src/MVP
+            semgrep --config=p/ci --error --quiet /src/MVP /src/06-Secure-DevOps-Tools-Cloud-Computing
       - name: Scan Terraform (Trivy)
         run: |
           docker run --rm -v "$PWD:/repo" aquasec/trivy:0.58.0 \
