@@ -1,0 +1,16 @@
+{
+  "is_sample": true,
+  "source": "fixture sintética criada para demonstração; substituir por coleta pública executada",
+  "observed_at": null,
+  "alerts": [
+    {
+      "id": "demo-centro-sp",
+      "area": "Área demonstrativa — Centro, São Paulo",
+      "precipitation_mm": 0,
+      "probability_pct": 0,
+      "source_name": "Open-Meteo (ainda não consultado nesta fixture)",
+      "source_url": "https://open-meteo.com/",
+      "updated_at": null
+    }
+  ]
+}

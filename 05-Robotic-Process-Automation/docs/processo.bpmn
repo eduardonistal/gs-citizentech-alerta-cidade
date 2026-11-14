@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" id="Definitions_AlertaCidade" targetNamespace="https://fiap.example/gs/alerta-cidade">
+  <bpmn:process id="Process_ColetaPrevisao" name="Coleta e publicação de previsão" isExecutable="false">
+    <bpmn:error id="Error_External" name="Falha de fonte ou publicação"/>
+    <bpmn:startEvent id="StartEvent_Daily" name="Agendamento diário"/>
+    <bpmn:serviceTask id="Task_Fetch" name="Consultar Open-Meteo"/>
+    <bpmn:boundaryEvent id="Boundary_FetchError" name="Falha de rede" attachedToRef="Task_Fetch" cancelActivity="true">
+      <bpmn:errorEventDefinition errorRef="Error_External"/>
+    </bpmn:boundaryEvent>
+    <bpmn:serviceTask id="Task_Validate" name="Validar arrays, limites e iterar datas"/>
+    <bpmn:boundaryEvent id="Boundary_ValidateError" name="Payload inválido" attachedToRef="Task_Validate" cancelActivity="true">
+      <bpmn:errorEventDefinition errorRef="Error_External"/>
+    </bpmn:boundaryEvent>
+    <bpmn:exclusiveGateway id="Gateway_Valid" name="Dados válidos?"/>
+    <bpmn:serviceTask id="Task_Publish" name="Publicar no MVP com token"/>
+    <bpmn:boundaryEvent id="Boundary_PublishError" name="Falha HTTP" attachedToRef="Task_Publish" cancelActivity="true">
+      <bpmn:errorEventDefinition errorRef="Error_External"/>
+    </bpmn:boundaryEvent>
+    <bpmn:serviceTask id="Task_AuditSuccess" name="Registrar sucesso sem conteúdo pessoal"/>
+    <bpmn:serviceTask id="Task_AuditFailure" name="Registrar falha sanitizada e alertar operador"/>
+    <bpmn:endEvent id="EndEvent_Success" name="Publicado"/>
+    <bpmn:endEvent id="EndEvent_Failure" name="Falha registrada"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_Daily" targetRef="Task_Fetch"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Fetch" targetRef="Task_Validate"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Validate" targetRef="Gateway_Valid"/>
+    <bpmn:sequenceFlow id="Flow_4" name="Sim" sourceRef="Gateway_Valid" targetRef="Task_Publish"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_Publish" targetRef="Task_AuditSuccess"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_AuditSuccess" targetRef="EndEvent_Success"/>
+    <bpmn:sequenceFlow id="Flow_7" name="Não ou exceção" sourceRef="Gateway_Valid" targetRef="Task_AuditFailure"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_AuditFailure" targetRef="EndEvent_Failure"/>
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Boundary_FetchError" targetRef="Task_AuditFailure"/>
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Boundary_ValidateError" targetRef="Task_AuditFailure"/>
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="Boundary_PublishError" targetRef="Task_AuditFailure"/>
+  </bpmn:process>
+</bpmn:definitions>

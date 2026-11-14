@@ -1,0 +1,157 @@
+{
+  "name": "GS — Alerta Cidade — Coleta e publicação",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://api.open-meteo.com/v1/forecast?latitude=-23.55&longitude=-46.63&daily=precipitation_sum,precipitation_probability_max&timezone=America%2FSao_Paulo&forecast_days=7",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          },
+          "timeout": 30000
+        }
+      },
+      "id": "efec648e-97e2-42e5-84d0-785ae7008041",
+      "name": "Consultar previsão pública",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        260,
+        300
+      ],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "const forecast = $input.first().json;\nconst daily = forecast.daily;\nconst dates = daily?.time;\nconst amounts = daily?.precipitation_sum;\nconst probabilities = daily?.precipitation_probability_max;\nif (!Array.isArray(dates) || !Array.isArray(amounts) || !Array.isArray(probabilities) || dates.length === 0 || dates.length !== amounts.length || dates.length !== probabilities.length) {\n  throw new Error('Previsão sem arrays diários alinhados.');\n}\nconst alerts = [];\nfor (let index = 0; index < dates.length; index += 1) {\n  const date = dates[index];\n  const precipitation = amounts[index];\n  const probability = probabilities[index];\n  const parsedDate = typeof date === 'string' && /^\\d{4}-\\d{2}-\\d{2}$/.test(date)\n    ? new Date(`${date}T00:00:00.000Z`)\n    : null;\n  if (!parsedDate || Number.isNaN(parsedDate.getTime()) || parsedDate.toISOString().slice(0, 10) !== date || !Number.isFinite(precipitation) || precipitation < 0 || !Number.isInteger(probability) || probability < 0 || probability > 100) {\n    throw new Error(`Medição inválida no índice ${index}.`);\n  }\n  alerts.push({\n    id: `sp-centro-${date}`,\n    area: 'Área demonstrativa — Centro, São Paulo',\n    precipitation_mm: precipitation,\n    probability_pct: probability,\n    source_name: 'Open-Meteo',\n    source_url: 'https://api.open-meteo.com/v1/forecast'\n  });\n}\nreturn [{ json: { observed_at: new Date().toISOString(), alerts } }];"
+      },
+      "id": "d85a7b5d-b263-4b6d-b0da-9a4ac8db07c3",
+      "name": "Validar, iterar e normalizar",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        500,
+        300
+      ],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:3000/api/alerts/import",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json }}",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "eb12a3be-7823-4f13-a28e-3892cd8a8b94",
+      "name": "Publicar no MVP autenticado",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        740,
+        300
+      ],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{ json: { event: 'publish_succeeded', count: $json.count, recorded_at: new Date().toISOString() } }];"
+      },
+      "id": "ac045c58-8ab5-4600-80c2-9f337d55e4d8",
+      "name": "Auditoria sem dados pessoais",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        980,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{ json: { event: 'workflow_step_failed', step: 'consult_or_normalize', recorded_at: new Date().toISOString(), action: 'inspect_redacted_n8n_execution_and_retry' } }];"
+      },
+      "id": "12a75c26-3f5b-490e-b445-dc28cfcf7830",
+      "name": "Registrar falha sanitizada",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        500,
+        500
+      ]
+    }
+  ],
+  "connections": {
+    "Consultar previsão pública": {
+      "main": [
+        [
+          {
+            "node": "Validar, iterar e normalizar",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Registrar falha sanitizada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validar, iterar e normalizar": {
+      "main": [
+        [
+          {
+            "node": "Publicar no MVP autenticado",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Registrar falha sanitizada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Publicar no MVP autenticado": {
+      "main": [
+        [
+          {
+            "node": "Auditoria sem dados pessoais",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Registrar falha sanitizada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all"
+  },
+  "versionId": "f59c4d28-d4a7-4e1f-b16f-25ce7f837a7f",
+  "meta": {
+    "templateCredsSetupCompleted": false
+  },
+  "tags": []
+}

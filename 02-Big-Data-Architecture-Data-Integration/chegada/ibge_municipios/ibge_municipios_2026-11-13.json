@@ -1,0 +1,45 @@
+{
+  "collected_at": "2026-11-14T18:05:02.572Z",
+  "logical_date": "2026-11-13",
+  "source": "https://servicodados.ibge.gov.br/api/v1/localidades/municipios/3550308",
+  "payload": {
+    "id": 3550308,
+    "nome": "São Paulo",
+    "microrregiao": {
+      "id": 35061,
+      "nome": "São Paulo",
+      "mesorregiao": {
+        "id": 3515,
+        "nome": "Metropolitana de São Paulo",
+        "UF": {
+          "id": 35,
+          "sigla": "SP",
+          "nome": "São Paulo",
+          "regiao": {
+            "id": 3,
+            "sigla": "SE",
+            "nome": "Sudeste"
+          }
+        }
+      }
+    },
+    "regiao-imediata": {
+      "id": 350001,
+      "nome": "São Paulo",
+      "regiao-intermediaria": {
+        "id": 3501,
+        "nome": "São Paulo",
+        "UF": {
+          "id": 35,
+          "sigla": "SP",
+          "nome": "São Paulo",
+          "regiao": {
+            "id": 3,
+            "sigla": "SE",
+            "nome": "Sudeste"
+          }
+        }
+      }
+    }
+  }
+}

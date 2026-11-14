@@ -1,0 +1,7 @@
+{
+  "ground_truth": [1, 1, 1, 0, 0],
+  "predictions": [1, 0, 1, 1, 0],
+  "synthetic": true,
+  "model_evaluated": false,
+  "description": "Toy binary-label metric example only; not real image provenance, YOLO training, object-detection mAP, or model performance."
+}

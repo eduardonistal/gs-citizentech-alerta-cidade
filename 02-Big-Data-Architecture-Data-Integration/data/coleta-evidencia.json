@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-11-14T18:05:03.160Z",
+  "lots": [
+    {
+      "ds": "2026-11-13",
+      "files": [
+        "C:\\Users\\Nistal\\Desktop\\GS\\02-Big-Data-Architecture-Data-Integration\\chegada\\open_meteo\\open_meteo_2026-11-13.json",
+        "C:\\Users\\Nistal\\Desktop\\GS\\02-Big-Data-Architecture-Data-Integration\\chegada\\ibge_municipios\\ibge_municipios_2026-11-13.json"
+      ]
+    },
+    {
+      "ds": "2026-11-14",
+      "files": [
+        "C:\\Users\\Nistal\\Desktop\\GS\\02-Big-Data-Architecture-Data-Integration\\chegada\\open_meteo\\open_meteo_2026-11-14.json",
+        "C:\\Users\\Nistal\\Desktop\\GS\\02-Big-Data-Architecture-Data-Integration\\chegada\\ibge_municipios\\ibge_municipios_2026-11-14.json"
+      ]
+    }
+  ],
+  "inventory": {
+    "open_meteo": [
+      {
+        "name": "open_meteo_2026-11-13.json",
+        "bytes": 978
+      },
+      {
+        "name": "open_meteo_2026-11-14.json",
+        "bytes": 977
+      }
+    ],
+    "ibge_municipios": [
+      {
+        "name": "ibge_municipios_2026-11-13.json",
+        "bytes": 1005
+      },
+      {
+        "name": "ibge_municipios_2026-11-14.json",
+        "bytes": 1005
+      }
+    ]
+  },
+  "note": "Coleta real via APIs públicas; equivale às tarefas paralelas do DAG para evidência local de chegada/. Upload ao Volume Databricks continua manual."
+}

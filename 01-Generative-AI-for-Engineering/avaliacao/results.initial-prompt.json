@@ -1,0 +1,270 @@
+{
+  "generated_at": "2026-11-07T22:21:15.086Z",
+  "model": "qwen2.5:3b",
+  "retrieval_threshold": "ao menos 1 termo lexical coincidente; exploratório, justificar/calibrar com corpus rotulado antes da submissão",
+  "scoreboard": {
+    "baseline": {
+      "retrieval_recall_at_1": 0.875,
+      "retrieval_recall_at_3": 0.875,
+      "answer_citation_recall": 0,
+      "correct_refusal_rate": 0.5
+    },
+    "rag": {
+      "retrieval_recall_at_1": 0.875,
+      "retrieval_recall_at_3": 0.875,
+      "answer_citation_recall": 0.875,
+      "correct_refusal_rate": 0.8333333333333334
+    },
+    "agent": {
+      "retrieval_recall_at_1": 0.875,
+      "retrieval_recall_at_3": 0.875,
+      "answer_citation_recall": 0.8333333333333334,
+      "correct_refusal_rate": 1
+    }
+  },
+  "note": "Resultados gerados localmente; revisar cada saída antes de qualquer alegação.",
+  "rows": [
+    {
+      "id": "T01",
+      "mode": "baseline",
+      "answer": "Não há contexto fornecido para responder à pergunta sobre o que significa a precipitação prevista.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": false,
+      "correct_refusal": false,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 0,
+      "valid_json": true
+    },
+    {
+      "id": "T02",
+      "mode": "baseline",
+      "answer": "Sem contexto fornecido, não é possível confirmar a previsão de alagamento da rua.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": false,
+      "correct_refusal": false,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 0,
+      "valid_json": true
+    },
+    {
+      "id": "T03",
+      "mode": "baseline",
+      "answer": "Sem contexto fornecido.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": false,
+      "correct_refusal": false,
+      "retrieval_recall_at_1": 0.5,
+      "retrieval_recall_at_3": 0.5,
+      "answer_citation_recall": 0,
+      "valid_json": true
+    },
+    {
+      "id": "T04",
+      "mode": "baseline",
+      "answer": "Sem contexto fornecido.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": true,
+      "correct_refusal": true,
+      "retrieval_recall_at_1": null,
+      "retrieval_recall_at_3": null,
+      "answer_citation_recall": null,
+      "valid_json": true
+    },
+    {
+      "id": "T05",
+      "mode": "baseline",
+      "answer": "Como assistente de inteligência artificial, não tenho informações sobre a localização ou as condições em tempo real da situação que você está passando. Recomendo que você busque informações atualizadas ou confiáveis para tomar decisões em situações de emergência.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": true,
+      "correct_refusal": true,
+      "retrieval_recall_at_1": null,
+      "retrieval_recall_at_3": null,
+      "answer_citation_recall": null,
+      "valid_json": true
+    },
+    {
+      "id": "T06",
+      "mode": "baseline",
+      "answer": "A API do IBGE (Instituto Brasileiro de Geografia e Estatística) oferece uma variedade de dados estatísticos e geográficos importantes para o Brasil. Esses dados abrangem diversas áreas, incluindo economia, demografia, educação, saúde, agricultura e muito mais. Os dados disponíveis permitem uma análise detalhada de tendências e padrões ao longo do tempo em diferentes regiões do país. Para obter mais informações específicas sobre o tipo de dados disponíveis, recomendo consultar diretamente a API do IBGE ou os sites oficiais do IBGE.",
+      "citations": [],
+      "abstained": false,
+      "expected_abstain": false,
+      "correct_refusal": true,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 0,
+      "valid_json": true
+    },
+    {
+      "id": "T01",
+      "mode": "rag",
+      "answer": "A API Forecast do Open-Meteo fornece dados meteorológicos de previsão, incluindo a precipitação e a probabilidade de precipitação. Os valores são previsões, não confirmam certamente que haverá alagamento.",
+      "citations": [
+        "meteo-precipitation"
+      ],
+      "abstained": false,
+      "expected_abstain": false,
+      "correct_refusal": true,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 1,
+      "valid_json": true
+    },
+    {
+      "id": "T02",
+      "mode": "rag",
+      "answer": "Não",
+      "citations": [
+        "meteo-precipitation"
+      ],
+      "abstained": false,
+      "expected_abstain": false,
+      "correct_refusal": true,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 1,
+      "valid_json": true
+    },
+    {
+      "id": "T03",
+      "mode": "rag",
+      "answer": "O Centro de Gerenciamento de Emergências de São Paulo é uma fonte oficial onde pode-se consultar orientação sobre clima e ocorrências da cidade.",
+      "citations": [
+        "cgesp"
+      ],
+      "abstained": false,
+      "expected_abstain": false,
+      "correct_refusal": true,
+      "retrieval_recall_at_1": 0.5,
+      "retrieval_recall_at_3": 0.5,
+      "answer_citation_recall": 0.5,
+      "valid_json": true
+    },
+    {
+      "id": "T04",
+      "mode": "rag",
+      "answer": "A API de Localidades do IBGE disponibiliza informações territoriais públicas. Metadados municipais não devem ser interpretados como população de bairro nem como medição de risco de alagamento.",
+      "citations": [
+        "ibge-localidades"
+      ],
+      "abstained": false,
+      "expected_abstain": true,
+      "correct_refusal": false,
+      "retrieval_recall_at_1": null,
+      "retrieval_recall_at_3": null,
+      "answer_citation_recall": null,
+      "valid_json": true
+    },
+    {
+      "id": "T05",
+      "mode": "rag",
+      "answer": "Não consta na base de conhecimento disponível.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": true,
+      "correct_refusal": true,
+      "retrieval_recall_at_1": null,
+      "retrieval_recall_at_3": null,
+      "answer_citation_recall": null,
+      "valid_json": true
+    },
+    {
+      "id": "T06",
+      "mode": "rag",
+      "answer": "A API do IBGE não fornece dados sobre precipitação ou probabilidade de alagamento. Ela oferece informações territoriais públicas, como dados de localidades, que não devem ser interpretados como população de bairro ou medição de risco de alagamento.",
+      "citations": [
+        "ibge-localidades"
+      ],
+      "abstained": false,
+      "expected_abstain": false,
+      "correct_refusal": true,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 1,
+      "valid_json": true
+    },
+    {
+      "id": "T01",
+      "mode": "agent",
+      "answer": "A API Forecast do Open-Meteo fornece variáveis meteorológicas de previsão, incluindo precipitação e probabilidade de precipitação. Os valores são previsão, não confirmação de alagamento.",
+      "citations": [
+        "meteo-precipitation"
+      ],
+      "abstained": false,
+      "expected_abstain": false,
+      "correct_refusal": true,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 1,
+      "valid_json": true
+    },
+    {
+      "id": "T02",
+      "mode": "agent",
+      "valid_json": false,
+      "error": "Error: resposta recusada não deve citar documentos não usados",
+      "expected_abstain": false,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1
+    },
+    {
+      "id": "T03",
+      "mode": "agent",
+      "answer": "Para obter orientação oficial, os cidadãos devem encaminhar ao Centro de Gerenciamento de Emergências de São Paulo, cuja localização é descrita no trecho de referência 'cgesp'. Este centro publica informações da cidade sobre clima e ocorrências, e encaminha os cidadãos à fonte oficial sem substituí-los em suas alertas.",
+      "citations": [
+        "cgesp"
+      ],
+      "abstained": false,
+      "expected_abstain": false,
+      "correct_refusal": true,
+      "retrieval_recall_at_1": 0.5,
+      "retrieval_recall_at_3": 0.5,
+      "answer_citation_recall": 0.5,
+      "valid_json": true
+    },
+    {
+      "id": "T04",
+      "mode": "agent",
+      "valid_json": false,
+      "error": "Error: resposta recusada não deve citar documentos não usados",
+      "expected_abstain": true,
+      "retrieval_recall_at_1": null,
+      "retrieval_recall_at_3": null
+    },
+    {
+      "id": "T05",
+      "mode": "agent",
+      "answer": "Não consta na base de conhecimento disponível.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": true,
+      "correct_refusal": true,
+      "retrieval_recall_at_1": null,
+      "retrieval_recall_at_3": null,
+      "answer_citation_recall": null,
+      "valid_json": true
+    },
+    {
+      "id": "T06",
+      "mode": "agent",
+      "answer": "A API de Localidades do IBGE oferece informações territoriais públicas e não deve ser interpretada como população de bairro ou como medição de risco de alagamento.",
+      "citations": [
+        "ibge-localidades"
+      ],
+      "abstained": false,
+      "expected_abstain": false,
+      "correct_refusal": true,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 1,
+      "valid_json": true
+    }
+  ]
+}

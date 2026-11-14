@@ -1,0 +1,20 @@
+{
+  "name": "gs-citizentech-alerta-cidade",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node MVP/server.mjs",
+    "test": "node --test MVP/test/risk.test.mjs MVP/test/ingest.test.mjs MVP/test/ai-proxy.test.mjs 01-Generative-AI-for-Engineering/test/rag.test.mjs 01-Generative-AI-for-Engineering/test/metrics.test.mjs 02-Big-Data-Architecture-Data-Integration/test/simulate-pipeline.test.mjs 04-Applied-Computer-Vision/test/evaluate_synthetic_example.test.mjs 04-Applied-Computer-Vision/test/train_threshold.test.mjs 05-Robotic-Process-Automation/test/process.test.mjs 05-Robotic-Process-Automation/test/run-automation.test.mjs 06-Secure-DevOps-Tools-Cloud-Computing/test/docs.test.mjs",
+    "collect-data": "node 02-Big-Data-Architecture-Data-Integration/scripts/collect-sources.mjs",
+    "rpa": "node 05-Robotic-Process-Automation/src/run-automation.mjs",
+    "vision-train": "node 04-Applied-Computer-Vision/src/train_threshold.mjs",
+    "genai-benchmark": "node 01-Generative-AI-for-Engineering/avaliacao/benchmark.mjs",
+    "render-reports": "node scripts/render-reports.mjs"
+  },
+  "devDependencies": {
+    "pdfkit": "^0.17.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

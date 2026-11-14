@@ -1,0 +1,5 @@
+Servico,Categoria,Provedor,Regiao,Unidade de uso,Premissa de planejamento,Uso real,Preco unitario cotado,Estimativa mensal cotada,Fonte oficial do preco,Data da consulta,URL de implantacao,Resultado de CI,Evidencia de alerta ao vivo
+Aplicacao,Compute,,,vCPU-horas,Referenciar carga-sintetica.csv,,,,,,,,
+Logs,Observabilidade,,,GB-mes e dias de retencao,Volume real e retencao aprovados pendentes,,,,,,,,
+Registro de imagem,Armazenamento,,,GB-mes e transferencia,Volume depende do registry escolhido,,,,,,,,
+Monitoramento,Observabilidade,,,Metricas e retencao,Perfil de retencao e uso medido pendentes,,,,,,,,

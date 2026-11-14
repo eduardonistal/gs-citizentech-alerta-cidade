@@ -1,0 +1,3 @@
+{"stage":"start","category":"info","message":"coleta iniciada","at":"2026-11-14T18:05:44.190Z"}
+{"stage":"collect","category":"success","message":"previsao obtida","items":3,"at":"2026-11-14T18:05:44.970Z"}
+{"stage":"publish","category":"success","message":"lote publicado no MVP","count":3,"at":"2026-11-14T18:05:45.015Z"}

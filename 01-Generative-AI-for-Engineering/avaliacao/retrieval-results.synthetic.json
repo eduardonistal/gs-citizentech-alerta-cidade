@@ -1,0 +1,92 @@
+{
+  "benchmark": "offline-synthetic-retrieval",
+  "synthetic": true,
+  "model_evaluated": false,
+  "fixture_ids": {
+    "document_ids": [
+      "cgesp",
+      "defesa-civil-guidance",
+      "ibge-localidades",
+      "meteo-precipitation"
+    ],
+    "test_case_ids": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06"
+    ]
+  },
+  "metrics": {
+    "retrieval_recall_at_1": 0.875,
+    "retrieval_recall_at_3": 0.875,
+    "scored_case_count": 4,
+    "unanswerable_case_count": 2
+  },
+  "cases": [
+    {
+      "id": "T01",
+      "relevant_ids": [
+        "meteo-precipitation"
+      ],
+      "ranked_ids": [
+        "meteo-precipitation"
+      ],
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1
+    },
+    {
+      "id": "T02",
+      "relevant_ids": [
+        "meteo-precipitation"
+      ],
+      "ranked_ids": [
+        "meteo-precipitation"
+      ],
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1
+    },
+    {
+      "id": "T03",
+      "relevant_ids": [
+        "defesa-civil-guidance",
+        "cgesp"
+      ],
+      "ranked_ids": [
+        "cgesp"
+      ],
+      "retrieval_recall_at_1": 0.5,
+      "retrieval_recall_at_3": 0.5
+    },
+    {
+      "id": "T04",
+      "relevant_ids": [],
+      "ranked_ids": [
+        "ibge-localidades"
+      ],
+      "retrieval_recall_at_1": null,
+      "retrieval_recall_at_3": null
+    },
+    {
+      "id": "T05",
+      "relevant_ids": [],
+      "ranked_ids": [],
+      "retrieval_recall_at_1": null,
+      "retrieval_recall_at_3": null
+    },
+    {
+      "id": "T06",
+      "relevant_ids": [
+        "ibge-localidades"
+      ],
+      "ranked_ids": [
+        "ibge-localidades",
+        "meteo-precipitation"
+      ],
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1
+    }
+  ],
+  "note": "Resultados sintéticos de recuperação lexical, aplicáveis somente a estes fixtures; não avaliam respostas de modelo, baseline, RAG ou agente."
+}

@@ -1,0 +1,10 @@
+Perfil,Dimensao,Quantidade,Unidade,Rotulo
+Baixo,Tráfego,3000,requisicoes/mes,Premissa sintetica de planejamento
+Baixo,Retenção,7,dias,Premissa sintetica de planejamento
+Baixo,Computação,36,vCPU-horas/mes,Premissa sintetica de planejamento
+Referencia,Tráfego,30000,requisicoes/mes,Premissa sintetica de planejamento
+Referencia,Retenção,30,dias,Premissa sintetica de planejamento
+Referencia,Computação,180,vCPU-horas/mes,Premissa sintetica de planejamento
+Pico,Tráfego,300000,requisicoes/mes,Premissa sintetica de planejamento
+Pico,Retenção,90,dias,Premissa sintetica de planejamento
+Pico,Computação,720,vCPU-horas/mes,Premissa sintetica de planejamento

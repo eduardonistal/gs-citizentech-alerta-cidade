@@ -1,0 +1,335 @@
+{
+  "generated_at": "2026-11-14T18:15:57.971Z",
+  "model": "qwen2.5:7b",
+  "retrieval_threshold": "ao menos 1 termo lexical coincidente após expansão de sinônimos; no conjunto atual recall@3=1.0; recalibrar se a base crescer",
+  "scoreboard": {
+    "baseline": {
+      "cases": 6,
+      "valid_output_rate": 1,
+      "retrieval_recall_at_1": 0.875,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 0,
+      "abstention_decision_accuracy": 0.3333333333333333,
+      "task_compliance": 0.3333333333333333
+    },
+    "rag": {
+      "cases": 6,
+      "valid_output_rate": 1,
+      "retrieval_recall_at_1": 0.875,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 1,
+      "abstention_decision_accuracy": 1,
+      "task_compliance": 1
+    },
+    "agent": {
+      "cases": 6,
+      "valid_output_rate": 1,
+      "retrieval_recall_at_1": 0.875,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 1,
+      "abstention_decision_accuracy": 1,
+      "task_compliance": 1
+    }
+  },
+  "note": "Resultados gerados localmente; revisar cada saída antes de qualquer alegação.",
+  "rows": [
+    {
+      "id": "T01",
+      "mode": "baseline",
+      "answer": "A precipitação prevista se refere às previsões meteorológicas sobre a possibilidade e quantidade de chuva, neve, granizo ou outros tipos de precipitação em um determinado local no futuro. Isso é comumente apresentado em mapas de previsão do tempo ou relatórios meteorológicos.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": false,
+      "expected_citations": [
+        "meteo-precipitation"
+      ],
+      "abstention_decision_correct": false,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 0,
+      "valid_json": true
+    },
+    {
+      "id": "T02",
+      "mode": "baseline",
+      "answer": "Sem contexto fornecido.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": false,
+      "expected_citations": [
+        "meteo-precipitation"
+      ],
+      "abstention_decision_correct": false,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 0,
+      "valid_json": true
+    },
+    {
+      "id": "T03",
+      "mode": "baseline",
+      "answer": "Para obter orientação oficial, você deve consultar os sites ou documentos oficiais relacionados ao assunto em questão. Isso pode incluir sites governamentais, instituições autorizadas ou organizações especializadas no tema.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": false,
+      "expected_citations": [
+        "defesa-civil-guidance",
+        "cgesp"
+      ],
+      "abstention_decision_correct": false,
+      "retrieval_recall_at_1": 0.5,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 0,
+      "valid_json": true
+    },
+    {
+      "id": "T04",
+      "mode": "baseline",
+      "answer": "Sem contexto fornecido.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": true,
+      "expected_citations": [],
+      "abstention_decision_correct": true,
+      "retrieval_recall_at_1": null,
+      "retrieval_recall_at_3": null,
+      "answer_citation_recall": null,
+      "valid_json": true
+    },
+    {
+      "id": "T05",
+      "mode": "baseline",
+      "answer": "Sem contexto fornecido, não posso fornecer uma rota de fuga específica.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": true,
+      "expected_citations": [],
+      "abstention_decision_correct": true,
+      "retrieval_recall_at_1": null,
+      "retrieval_recall_at_3": null,
+      "answer_citation_recall": null,
+      "valid_json": true
+    },
+    {
+      "id": "T06",
+      "mode": "baseline",
+      "answer": "A API do IBGE oferece acesso a diversos dados e informações, incluindo, mas não limitado a, dados demográficos, econômicos, sociais e geográficos do Brasil. Isso pode incluir estatísticas sobre população, economia, educação, saúde, meio ambiente e muito mais, dependendo da API específica utilizada.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": false,
+      "expected_citations": [
+        "ibge-localidades"
+      ],
+      "abstention_decision_correct": false,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 0,
+      "valid_json": true
+    },
+    {
+      "id": "T01",
+      "mode": "rag",
+      "answer": "A precipitação prevista é fornecida pela API Forecast do Open-Meteo e representa a previsão, não a confirmação de alagamento.",
+      "citations": [
+        "meteo-precipitation"
+      ],
+      "abstained": false,
+      "expected_abstain": false,
+      "expected_citations": [
+        "meteo-precipitation"
+      ],
+      "abstention_decision_correct": true,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 1,
+      "valid_json": true
+    },
+    {
+      "id": "T02",
+      "mode": "rag",
+      "answer": "A previsão confirma que a rua está alagada não pode ser respondida com base nos dados fornecidos. Os trechos não contêm informações sobre alagamentos específicos na rua mencionada.",
+      "citations": [
+        "meteo-precipitation",
+        "ibge-localidades"
+      ],
+      "abstained": false,
+      "expected_abstain": false,
+      "expected_citations": [
+        "meteo-precipitation"
+      ],
+      "abstention_decision_correct": true,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 1,
+      "valid_json": true
+    },
+    {
+      "id": "T03",
+      "mode": "rag",
+      "answer": "Para consultar orientação oficial, você pode consultar as autoridades locais e os canais oficiais, como o Centro de Gerenciamento de Emergências de São Paulo e a Defesa Civil Nacional.",
+      "citations": [
+        "cgesp",
+        "defesa-civil-guidance"
+      ],
+      "abstained": false,
+      "expected_abstain": false,
+      "expected_citations": [
+        "defesa-civil-guidance",
+        "cgesp"
+      ],
+      "abstention_decision_correct": true,
+      "retrieval_recall_at_1": 0.5,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 1,
+      "valid_json": true
+    },
+    {
+      "id": "T04",
+      "mode": "rag",
+      "answer": "Não consta na base de conhecimento disponível para esta pergunta.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": true,
+      "expected_citations": [],
+      "abstention_decision_correct": true,
+      "retrieval_recall_at_1": null,
+      "retrieval_recall_at_3": null,
+      "answer_citation_recall": null,
+      "valid_json": true
+    },
+    {
+      "id": "T05",
+      "mode": "rag",
+      "answer": "Não consta na base de conhecimento disponível para esta pergunta.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": true,
+      "expected_citations": [],
+      "abstention_decision_correct": true,
+      "retrieval_recall_at_1": null,
+      "retrieval_recall_at_3": null,
+      "answer_citation_recall": null,
+      "valid_json": true
+    },
+    {
+      "id": "T06",
+      "mode": "rag",
+      "answer": "A API do IBGE oferece informações territoriais públicas, incluindo metadados municipais, mas não fornece dados sobre população de bairro nem sobre risco de alagamento.",
+      "citations": [
+        "ibge-localidades"
+      ],
+      "abstained": false,
+      "expected_abstain": false,
+      "expected_citations": [
+        "ibge-localidades"
+      ],
+      "abstention_decision_correct": true,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 1,
+      "valid_json": true
+    },
+    {
+      "id": "T01",
+      "mode": "agent",
+      "answer": "A precipitação prevista é uma previsão fornecida pela API Forecast do Open-Meteo, que indica a quantidade de precipitação esperada, mas não confirma a ocorrência de alagamentos.",
+      "citations": [
+        "meteo-precipitation"
+      ],
+      "abstained": false,
+      "expected_abstain": false,
+      "expected_citations": [
+        "meteo-precipitation"
+      ],
+      "abstention_decision_correct": true,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 1,
+      "valid_json": true
+    },
+    {
+      "id": "T02",
+      "mode": "agent",
+      "answer": "A previsão não confirma que a rua esteja alagada. Os valores fornecidos são previsões meteorológicas, não confirmações de alagamento.",
+      "citations": [
+        "meteo-precipitation"
+      ],
+      "abstained": false,
+      "expected_abstain": false,
+      "expected_citations": [
+        "meteo-precipitation"
+      ],
+      "abstention_decision_correct": true,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 1,
+      "valid_json": true
+    },
+    {
+      "id": "T03",
+      "mode": "agent",
+      "answer": "Para consultar orientação oficial, você pode consultar o Centro de Gerenciamento de Emergências de São Paulo ou a Defesa Civil Nacional. Ambas publicam informações e orientações oficiais relevantes para a população em situações de emergência. Além disso, é recomendado consultar as autoridades locais e os canais oficiais em caso de emergência.",
+      "citations": [
+        "cgesp",
+        "defesa-civil-guidance"
+      ],
+      "abstained": false,
+      "expected_abstain": false,
+      "expected_citations": [
+        "defesa-civil-guidance",
+        "cgesp"
+      ],
+      "abstention_decision_correct": true,
+      "retrieval_recall_at_1": 0.5,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 1,
+      "valid_json": true
+    },
+    {
+      "id": "T04",
+      "mode": "agent",
+      "answer": "Não consta na base de conhecimento disponível para esta pergunta.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": true,
+      "expected_citations": [],
+      "abstention_decision_correct": true,
+      "retrieval_recall_at_1": null,
+      "retrieval_recall_at_3": null,
+      "answer_citation_recall": null,
+      "valid_json": true
+    },
+    {
+      "id": "T05",
+      "mode": "agent",
+      "answer": "Não consta na base de conhecimento disponível para esta pergunta.",
+      "citations": [],
+      "abstained": true,
+      "expected_abstain": true,
+      "expected_citations": [],
+      "abstention_decision_correct": true,
+      "retrieval_recall_at_1": null,
+      "retrieval_recall_at_3": null,
+      "answer_citation_recall": null,
+      "valid_json": true
+    },
+    {
+      "id": "T06",
+      "mode": "agent",
+      "answer": "A API do IBGE oferece informações territoriais públicas, como metadados municipais, mas não fornece dados sobre população de bairro nem sobre risco de alagamento.",
+      "citations": [
+        "ibge-localidades"
+      ],
+      "abstained": false,
+      "expected_abstain": false,
+      "expected_citations": [
+        "ibge-localidades"
+      ],
+      "abstention_decision_correct": true,
+      "retrieval_recall_at_1": 1,
+      "retrieval_recall_at_3": 1,
+      "answer_citation_recall": 1,
+      "valid_json": true
+    }
+  ]
+}

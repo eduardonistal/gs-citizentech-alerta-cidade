@@ -1,0 +1,9 @@
+{
+  "license": "synthetic-generated-locally",
+  "count": 40,
+  "classes": [
+    "water_on_road",
+    "dry_road"
+  ],
+  "note": "Imagens sintéticas geradas por amostragem RGB; não são fotografias reais."
+}

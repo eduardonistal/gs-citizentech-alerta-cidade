@@ -1,0 +1,30 @@
+{
+  "synthetic": true,
+  "records": [
+    {
+      "date": "2026-11-07",
+      "precipitation_mm": -1,
+      "probability_percent": 20
+    },
+    {
+      "date": "2026-11-07",
+      "precipitation_mm": 55,
+      "probability_percent": 80
+    },
+    {
+      "date": "2026-11-07",
+      "precipitation_mm": 0,
+      "probability_percent": 10
+    },
+    {
+      "date": "2026-11-08",
+      "precipitation_mm": 20,
+      "probability_percent": 10
+    },
+    {
+      "date": "2026-11-09",
+      "precipitation_mm": 5,
+      "probability_percent": 10
+    }
+  ]
+}

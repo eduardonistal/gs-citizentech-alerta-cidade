@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.*
+!.env.example
+**/results.actual.json
+**/runs/
+**/weights/
+**/*.pt
+**/*.onnx
+**/output/
+**/__pycache__/
+**/.pytest_cache/
+MVP/data/alerts.json

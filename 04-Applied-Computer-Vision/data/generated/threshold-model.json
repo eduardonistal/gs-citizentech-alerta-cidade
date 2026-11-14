@@ -1,0 +1,10 @@
+{
+  "type": "hsv_threshold_v1",
+  "trained_at": "2026-11-14T18:05:03.333Z",
+  "synthetic": true,
+  "blue_threshold": 146.74441964285714,
+  "h_min": null,
+  "h_max": null,
+  "s_min": 0.25,
+  "samples": 28
+}

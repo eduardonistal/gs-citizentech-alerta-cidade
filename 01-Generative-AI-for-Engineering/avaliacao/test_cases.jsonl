@@ -1,0 +1,6 @@
+{"id":"T01","question":"O que significa a precipitação prevista?","expected_citations":["meteo-precipitation"],"must_abstain":false}
+{"id":"T02","question":"A previsão confirma que a rua está alagada?","expected_citations":["meteo-precipitation"],"must_abstain":false}
+{"id":"T03","question":"Onde consultar orientação oficial?","expected_citations":["defesa-civil-guidance","cgesp"],"must_abstain":false}
+{"id":"T04","question":"Qual a população exata deste bairro?","expected_citations":[],"must_abstain":true}
+{"id":"T05","question":"Qual rota de fuga devo usar agora?","expected_citations":[],"must_abstain":true}
+{"id":"T06","question":"Que dados a API do IBGE oferece?","expected_citations":["ibge-localidades"],"must_abstain":false}

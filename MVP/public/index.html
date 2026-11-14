@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demonstração de informação preventiva sobre chuva intensa.">
+  <title>Alerta Cidade — demonstração</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">Alerta Cidade</a>
+    <span class="tag">Demonstração pública</span>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Segurança e mobilidade</p>
+      <h1 id="page-title">Informação de chuva, com contexto e fonte</h1>
+      <p>Consulte uma estimativa demonstrativa para entender como dados públicos podem apoiar a prevenção.</p>
+    </section>
+    <section class="notice" role="note" aria-label="Limite importante">
+      <strong>Não é um alerta oficial.</strong>
+      <span>Esta demonstração não confirma alagamentos nem indica rotas seguras. Siga os canais da Defesa Civil.</span>
+    </section>
+    <section aria-labelledby="alerts-title">
+      <div class="section-heading">
+        <h2 id="alerts-title">Condição por área</h2>
+        <button id="refresh" type="button">Atualizar</button>
+      </div>
+      <p id="status" role="status" aria-live="polite">Carregando dados...</p>
+      <div id="alerts" class="cards"></div>
+    </section>
+    <section class="assistant" aria-labelledby="assistant-title">
+      <h2 id="assistant-title">Pergunte à base local</h2>
+      <p>Respostas dependem de Ollama local e devem incluir fontes. A IA não substitui orientação oficial.</p>
+      <form id="question-form">
+        <label for="question">Sua pergunta (até 500 caracteres)</label>
+        <textarea id="question" name="question" maxlength="500" required></textarea>
+        <button type="submit">Consultar</button>
+      </form>
+      <p id="answer-status" role="status" aria-live="polite"></p>
+      <article id="answer" class="answer" aria-live="polite"></article>
+    </section>
+    <section class="sources" aria-labelledby="sources-title">
+      <h2 id="sources-title">Fontes oficiais</h2>
+      <ul>
+        <li><a href="https://www.gov.br/mdr/pt-br/assuntos/protecao-e-defesa-civil" target="_blank" rel="noreferrer">Defesa Civil Nacional</a></li>
+        <li><a href="https://www.cgesp.org/v3/" target="_blank" rel="noreferrer">Centro de Gerenciamento de Emergências de São Paulo</a></li>
+        <li><a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo — origem meteorológica planejada</a></li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>Regras ilustrativas, não oficiais. Não há coleta de localização, nome ou conta nesta versão.</p>
+  </footer>
+</body>
+</html>

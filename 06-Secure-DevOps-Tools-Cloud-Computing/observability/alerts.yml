@@ -1,0 +1,18 @@
+groups:
+  - name: alerta-cidade
+    rules:
+      - alert: MVPHighErrorRate
+        expr: rate(http_errors_total[5m]) > 0.1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "A taxa de erro do MVP está acima do limite demonstrativo"
+          description: "Inspecione logs sanitizados e saúde das fontes; não inclua dados pessoais."
+      - alert: MVPUnavailable
+        expr: up{job="alerta-cidade"} == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Prometheus não consegue consultar o MVP"
