@@ -63,4 +63,4 @@ O log registra etapas `start` → `collect` → `publish` **sem** token, Authori
 
 ## Vídeo e publicação
 
-Roteiro em `docs/roteiro-video-demo.md`. Vídeo, repositório público e envio no Teams: **pendentes** (Eduardo de Oliveira Nistal — RM94524, até 19/11/2026 23h55).
+Roteiro em `docs/roteiro-video-demo.md`. Vídeo local: [`../../videos/05-rpa-demo.mp4`](../../videos/05-rpa-demo.mp4). YouTube e envio no Teams: **pendentes** (Eduardo de Oliveira Nistal — RM94524, até 19/11/2026 23h55).

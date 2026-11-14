@@ -9,9 +9,12 @@
     "rpa": "node 05-Robotic-Process-Automation/src/run-automation.mjs",
     "vision-train": "node 04-Applied-Computer-Vision/src/train_threshold.mjs",
     "genai-benchmark": "node 01-Generative-AI-for-Engineering/avaliacao/benchmark.mjs",
+    "generate-videos": "node scripts/generate-videos.mjs",
     "render-reports": "node scripts/render-reports.mjs"
   },
   "devDependencies": {
+    "edge-tts": "^1.0.1",
+    "node-edge-tts": "^1.2.12",
     "pdfkit": "^0.17.2"
   },
   "engines": {

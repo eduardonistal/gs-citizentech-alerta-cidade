@@ -19,4 +19,5 @@ O [modelo de negócio](docs/modelo-negocio.md) é um rascunho de planejamento, n
   - Vídeo não listado:
   - Envio no Teams:
 
-Status do vídeo e envio: pendentes.
+Vídeo local gerado (narração pt-BR): [`../videos/03-pitch-alerta-cidade.mp4`](../videos/03-pitch-alerta-cidade.mp4).  
+Publicação YouTube não listado e envio no Teams: pendentes.

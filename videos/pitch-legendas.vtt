@@ -1,0 +1,33 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+Olá. Sou Eduardo de Oliveira Nistal, RM nove quatro cinco dois quatro, único integrante do projeto Alerta Cidade.
+
+2
+00:00:08.000 --> 00:00:22.000
+Alerta Cidade ajuda pessoas a encontrar e interpretar informação pública sobre chuva, mostrando origem, horário e limites do dado. A previsão não confirma alagamento e não substitui a Defesa Civil.
+
+3
+00:00:22.000 --> 00:00:42.000
+Como evidência pública, consultei a API Open-Meteo para São Paulo. Em quatorze de novembro de dois mil e vinte e seis, a precipitação prevista no ponto demonstrativo foi de zero vírgula dez milímetros. Em seguida encaminhamos a canais oficiais, como a Defesa Civil.
+
+4
+00:00:42.000 --> 00:00:56.000
+A proposta organiza informação pública em linguagem simples, mostra de onde veio e quando foi atualizada, e encaminha aos canais oficiais. Não confirma alagamentos, não recomenda rotas e não substitui autoridades.
+
+5
+00:00:56.000 --> 00:01:12.000
+O MVP Alerta Cidade está no repositório público no GitHub. Ele mostra status por área, fonte, horário e permite perguntas à base local com citações. A demonstração usa dados públicos ou lotes ingeridos pela automação.
+
+6
+00:01:12.000 --> 00:01:29.000
+Os cidadãos são os usuários previstos. Os compradores potenciais seriam instituições, como municípios ou consórcios. O caminho é validar com usuários e órgãos, desenhar um piloto e só então avaliar contratação. Não temos preço validado nem comprador confirmado.
+
+7
+00:01:29.000 --> 00:01:44.000
+A proposta se alinha tematicamente aos ODS onze e treze. Os indicadores planejados incluem disponibilidade da fonte, compreensão dos avisos e encaminhamento oficial. Ainda não há linha de base nem impacto medido.
+
+8
+00:01:44.000 --> 00:01:53.000
+Nosso pedido é conversar com usuários e instituições interessadas para desenhar e avaliar um piloto, sem presumir parceria. Obrigado.

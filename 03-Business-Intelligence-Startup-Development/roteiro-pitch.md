@@ -3,7 +3,8 @@
 Integrante único e responsável pelo envio: **Eduardo de Oliveira Nistal — RM94524**.<br>
 **MVP ao vivo:** `[PREENCHER URL pública funcional e testar antes da gravação]`<br>
 **Fonte oficial para a abertura:** `[PREENCHER fonte, URL e data/horário reais da consulta]`<br>
-**Vídeo real:** `[PREENCHER URL do vídeo não listado após gravar e publicar]`<br>
+**Vídeo local (narração pt-BR automática):** [`../videos/03-pitch-alerta-cidade.mp4`](../videos/03-pitch-alerta-cidade.mp4)<br>
+**Vídeo YouTube (não listado):** `[PREENCHER URL após publicar]`<br>
 **Link de envio:** `[PREENCHER link de envio no Teams após enviar]`
 
 > **Rascunho de gravação.** Campos entre colchetes são instruções de produção: não os leiam nem os apresentem como fatos. Não afirmem pesquisa, usuário, dado, implantação, preço, parceria, custo ou impacto sem evidência real identificável. O vídeo e o envio permanecem pendentes até acontecerem.
@@ -102,5 +103,6 @@ Gravar tela e câmera com cortes discretos, mantendo uma captura íntegra do flu
 - [ ] Link real de envio no Teams registrado após o envio, até 19/11/2026 às 23h55.
 
 **Status:** gravação, publicação e envio pendentes.<br>
-**URL do vídeo real:** `[PREENCHER somente após gravação/publicação]`<br>
+**Arquivo local:** [`../videos/03-pitch-alerta-cidade.mp4`](../videos/03-pitch-alerta-cidade.mp4)<br>
+**URL YouTube:** `[PREENCHER somente após publicação]`<br>
 **Link de envio no Teams:** `[PREENCHER somente após enviar]`

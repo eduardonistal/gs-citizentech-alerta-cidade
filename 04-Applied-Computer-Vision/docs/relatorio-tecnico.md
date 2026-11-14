@@ -54,4 +54,4 @@ Fonte: `data/generated/threshold-metrics.json`. **São amostras RGB sintéticas*
 
 ## Conclusão
 
-Há evidência local de treino/avaliação no pipeline HSV sintético e código YOLO pronto. Dataset fotográfico licenciado, vídeo funcional e repositório GitHub público continuam pendentes para fechar a rubrica completa do PDF.
+Há evidência local de treino/avaliação no pipeline HSV sintético e código YOLO pronto. Vídeo local (narração pt-BR): [`../../videos/04-computer-vision-demo.mp4`](../../videos/04-computer-vision-demo.mp4). Dataset fotográfico licenciado, YouTube e envio no Teams continuam pendentes para fechar a rubrica completa do PDF.

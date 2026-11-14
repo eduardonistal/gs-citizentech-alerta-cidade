@@ -11,3 +11,6 @@ node_modules/
 **/__pycache__/
 **/.pytest_cache/
 MVP/data/alerts.json
+videos/_work_*/
+videos/_tts-test.mp3
+devsecops.yml.bak

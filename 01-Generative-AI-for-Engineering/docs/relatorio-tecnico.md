@@ -62,4 +62,4 @@ Inferência somente em Ollama local. Citações precisam existir no contexto rec
 
 ## Conclusão e links
 
-Código, base, casos, notebook, placar e erros estão nesta pasta. Repositório público: **pendente de publicação**. Vídeo: **pendente**. Envio no Teams: **pendente; responsável: Eduardo de Oliveira Nistal — RM94524**.
+Código, base, casos, notebook, placar e erros estão nesta pasta. Repositório: https://github.com/eduardonistal/gs-citizentech-alerta-cidade. Vídeo local: [`../../videos/01-generative-ai-demo.mp4`](../../videos/01-generative-ai-demo.mp4). YouTube não listado e envio no Teams: **pendentes** (Eduardo de Oliveira Nistal — RM94524).

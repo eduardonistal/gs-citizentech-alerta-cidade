@@ -20,6 +20,11 @@ Gera `data/generated/threshold-model.json` e `threshold-metrics.json` (F1 = 1,00
 4. Inferência: `python src/detect_video.py ...`
 5. Atualizar `docs/relatorio-tecnico.md` e gravar o vídeo funcional.
 
+## Vídeo
+
+Vídeo local (narração pt-BR): [`../videos/04-computer-vision-demo.mp4`](../videos/04-computer-vision-demo.mp4).  
+YouTube não listado e envio no Teams: pendentes.
+
 ## Entrega PDF
 
 Resumo (250 palavras) e objetivo (50 palavras) estão em `docs/relatorio-tecnico.md`. Regenerar PDF com `npm run render-reports`.

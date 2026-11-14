@@ -24,4 +24,6 @@ node --test .\test\process.test.mjs .\test\run-automation.test.mjs
 node --test ..\MVP\test\ingest.test.mjs
 ```
 
-BPMN/PDD: `docs/processo.bpmn`. Relatório: `docs/relatorio-tecnico.md`. Vídeo e repositório público: pendentes.
+BPMN/PDD: `docs/processo.bpmn`. Relatório: `docs/relatorio-tecnico.md`.  
+Vídeo local (narração pt-BR): [`../videos/05-rpa-demo.mp4`](../videos/05-rpa-demo.mp4).  
+YouTube e envio no Teams: pendentes.

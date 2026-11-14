@@ -26,4 +26,6 @@ Rodada verificada em 14/11/2026: RAG e agente com task compliance **1,000** fren
 
 ## Escopo ainda externo
 
-Repositório GitHub público, vídeo e envio no Teams continuam pendentes do aluno.
+Repositório: https://github.com/eduardonistal/gs-citizentech-alerta-cidade  
+Vídeo local (narração pt-BR): [`../videos/01-generative-ai-demo.mp4`](../videos/01-generative-ai-demo.mp4)  
+YouTube não listado e envio no Teams: pendentes.
