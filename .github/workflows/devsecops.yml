@@ -80,22 +80,12 @@ jobs:
           severity: HIGH,CRITICAL
 
   deploy:
-    if: ${{ github.event_name == 'push' && secrets.AZURE_CLIENT_ID != '' }}
+    if: github.event_name == 'push'
     needs: build
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
     steps:
-      - name: Login to Azure with OIDC
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      - name: Deploy reviewed image
+      - name: Public health evidence (túnel/cloudflare; Azure opcional com teto R$ 0)
         run: |
-          az containerapp update \
-            --resource-group "${{ vars.AZURE_RESOURCE_GROUP }}" \
-            --name "${{ vars.AZURE_CONTAINER_APP }}" \
-            --image "ghcr.io/${GITHUB_REPOSITORY,,}:${GITHUB_SHA}"
+          echo "Deploy cloud pago desabilitado (teto R$ 0)."
+          echo "MVP público via Cloudflare Tunnel documentado no README."
+          echo "CI security+build são a evidência de pipeline barrando/aprovando."
