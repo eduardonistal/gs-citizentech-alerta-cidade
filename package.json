@@ -10,7 +10,9 @@
     "vision-train": "node 04-Applied-Computer-Vision/src/train_threshold.mjs",
     "genai-benchmark": "node 01-Generative-AI-for-Engineering/avaliacao/benchmark.mjs",
     "generate-videos": "node scripts/generate-videos.mjs",
-    "render-reports": "node scripts/render-reports.mjs"
+    "render-reports": "node scripts/render-reports.mjs",
+    "pack-teams": "node scripts/pack-teams-entregas.mjs",
+    "pack-entrega": "node scripts/pack-entrega-unica.mjs"
   },
   "devDependencies": {
     "edge-tts": "^1.0.1",

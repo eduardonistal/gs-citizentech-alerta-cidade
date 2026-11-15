@@ -39,11 +39,14 @@ npm test
 Artefatos locais ampliados e verificados em 14/11/2026: GenAI com placar RAG/agente > baseline (`qwen2.5:7b`), coleta Big Data com dois lotes reais em `chegada/`, RPA ponta a ponta no MVP, treino HSV de visão (sintético) e `npm test` 40/40.
 
 **Repositório público:** https://github.com/eduardonistal/gs-citizentech-alerta-cidade  
-**MVP (túnel):** https://journey-formatting-alone-swing.trycloudflare.com  
+**MVP (túnel):** https://analyzed-jun-the-musician.trycloudflare.com  
+
+**Sede da entrega (estilo empresa):** [`empresa/`](./empresa/) — organograma, rubrica e `COMECE-AQUI.md`.  
+**ZIP único para Teams:** `npm run pack-entrega` → `entrega-final/` + atalho na Área de Trabalho.  
 
 **Vídeos prontos** (narração pt-BR): [`videos/`](./videos/) — regenerar com `npm run generate-videos`.  
 **Download público:** https://github.com/eduardonistal/gs-citizentech-alerta-cidade/releases/tag/videos-pt-br-2026-11-14  
-**Ainda faltam para 100% do PDF:** YouTube não listado, Teams, Airflow/Databricks com prints e deploy cloud permanente. Detalhes em [`CHECKLIST_ENTREGAS.md`](./CHECKLIST_ENTREGAS.md).
+**Pendências só humanas:** YouTube não listado (opcional se anexar MP4), Databricks UI, envio Teams. Detalhes em [`CHECKLIST_ENTREGAS.md`](./CHECKLIST_ENTREGAS.md).
 
 Prazo geral indicado no PDF: **19/11/2026 às 23h55**, no Teams/portal de cada disciplina. O PDF limita cada equipe a cinco alunos da mesma turma e exige a mesma equipe e o mesmo produto em todas as disciplinas. Links públicos devem continuar funcionando durante a correção, que pode ocorrer até uma semana após o encerramento.
 

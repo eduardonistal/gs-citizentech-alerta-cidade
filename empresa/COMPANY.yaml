@@ -1,0 +1,73 @@
+company:
+  name: Alerta Cidade
+  legal_name: Alerta Cidade (projeto acadêmico GS CitizenTech)
+  hq_path: C:\Users\Nistal\Desktop\GS\empresa
+  product_repo: C:\Users\Nistal\Desktop\GS
+  language: pt-BR
+  stage: entrega-academica
+  icp: cidadãos urbanos + compradores institucionais potenciais (municípios/consórcios)
+  product: MVP de informação preventiva sobre chuva intensa (não é alerta oficial)
+
+founder:
+  name: Eduardo de Oliveira Nistal
+  rm: "94524"
+  role: Founder / único integrante e responsável pelo envio Teams
+
+governance:
+  chain_of_command:
+    - Founder
+    - CEO (entrega GS)
+    - Diretores por disciplina
+  rule: Cada disciplina tem um dono; o ZIP único consolida tudo para nota máxima no PDF.
+  deadline: "2026-11-19T23:55:00-03:00"
+
+org:
+  - id: ceo
+    role: CEO — Entrega GS
+    path: departments/00-ceo
+    owns: [índice, rubrica, ZIP único, checklist]
+  - id: genai
+    role: Diretor GenAI
+    path: departments/01-genai
+    disciplina: Generative AI for Engineering
+  - id: bigdata
+    role: Diretor Dados
+    path: departments/02-bigdata
+    disciplina: Big Data Architecture & Data Integration
+  - id: bi
+    role: Diretor Negócio / Pitch
+    path: departments/03-bi-startup
+    disciplina: Business Intelligence & Startup Development
+  - id: vision
+    role: Diretor Visão
+    path: departments/04-vision
+    disciplina: Applied Computer Vision
+  - id: rpa
+    role: Diretor Automação
+    path: departments/05-rpa
+    disciplina: Robotic Process Automation
+  - id: devops
+    role: Diretor DevSecOps
+    path: departments/06-devops
+    disciplina: Secure DevOps Tools & Cloud Computing
+  - id: clo
+    role: CLO — LGPD / limites do produto
+    path: departments/clo
+  - id: ciso
+    role: CISO — segurança e evidências CI
+    path: departments/ciso
+
+keywords_router:
+  genai: [RAG, Ollama, agente, recall, notebook, GenAI]
+  bigdata: [Airflow, Bronze, Prata, Ouro, Databricks, lakehouse, IBGE, Open-Meteo]
+  bi: [pitch, ODS, modelo de negócio, startup, vídeo pitch]
+  vision: [YOLO, HSV, dataset, visão, water_on_road]
+  rpa: [n8n, BPMN, automação, exceção, log]
+  devops: [Docker, Terraform, Prometheus, Gitleaks, Trivy, CI, Cloudflare]
+  clo: [LGPD, privacidade, limites, não alerta oficial]
+  ciso: [segredo, scanner, pipeline, barrada]
+
+entrega:
+  objetivo: ZIP único com material suficiente para maximizar nota nas 6 disciplinas (Maker Lab excluída)
+  teams: Founder envia cada pacote/disciplina no Teams
+  zip_master: entrega-final/AlertaCidade-GS-RM94524-ENTREGA-COMPLETA.zip
